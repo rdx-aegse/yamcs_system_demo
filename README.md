@@ -24,6 +24,9 @@ chmod +x ./run.sh
 ./run.sh
 ```
 
+The log window will eventually say YAMCS's web client will be accessible at localhost:8090 in any web browser. 
+YAMCS studio can also be used instead of the web client. Both usages are out of scope. 
+
 Then, to update the submodules:
 ```bash
 git pull
