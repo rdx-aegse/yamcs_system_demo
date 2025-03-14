@@ -1,9 +1,9 @@
 version: '3.8'  # Specify the version
 
 services:  
-  yamcs_link:
+  yamcs_link_demo:
     build:
-      context: ./yamcs_link
+      context: ./yamcs_link_demo
     volumes:
       - mdb_shared:/mdb_shared 
     network_mode: "host" #Easier for a test
