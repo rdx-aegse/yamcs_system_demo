@@ -1,0 +1,3 @@
+[submodule "yamcs_link_demo/src/yamcs_link"]
+	path = yamcs_link_demo/src/yamcs_link
+	url = git@github.com:rdx-aegse/yamcs_link.git
