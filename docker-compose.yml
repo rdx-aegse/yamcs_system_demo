@@ -1,9 +1,27 @@
 version: '3.8'  # Specify the version
 
 services:  
+  fprime_demo:
+      build:
+        context: ./fprime_demo
+      environment:
+        PORT_TC: 10000
+        PORT_TM: 10001
+        #PORT_EV: 10002
+        FP_ARTIFACTS: /src/fprime_app/ #TODO: complete this path
+        YAMCS_MDB: /mdb_shared
+      volumes:
+        - mdb_shared:/mdb_shared 
+      network_mode: "host" #Easier for a test
+
   yamcs_link_demo:
     build:
       context: ./yamcs_link_demo
+    environment:
+      PORT_TC: 10000
+      PORT_TM: 10001
+      #PORT_EV: 10002
+      YAMCS_MDB: /mdb_shared
     volumes:
       - mdb_shared:/mdb_shared 
     network_mode: "host" #Easier for a test
@@ -11,6 +29,15 @@ services:
   yamcs_server:
     build:
       context: ./yamcs_server
+    environment:
+      YAMCS_HTTP_PORT: 8090
+      PORT_YL_TC: 10000 #Must match PORT_CMD of yamcs_link_demo
+      PORT_YL_TM: 10001 #Must match PORT_TM of yamcs_link_demo
+      #PORT_YL_EV: 10002 #Must match PORT_EV of yamcs_link_demo
+      PORT_FP_TC: 11000 #Must match PORT_CMD of fprime_demo
+      PORT_FP_TM: 11001 #Must match PORT_TM of fprime_demo
+      #PORT_FP_EV: 11002 #Must match PORT_EV of fprime_demo
+      YAMCS_MDB: /mdb_shared
     volumes:
       - mdb_shared:/mdb_shared  
     network_mode: "host"
