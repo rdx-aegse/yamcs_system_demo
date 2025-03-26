@@ -1,0 +1,6 @@
+[submodule "fprime2yamcs"]
+	path = fprime_demo/src/fprime2yamcs
+	url = https://github.com/rdx-aegse/fprime2yamcs
+[submodule "yamcs_link"]
+	path = yamcs_link_demo/src/yamcs_link
+	url = https://github.com/rdx-aegse/yamcs_link
