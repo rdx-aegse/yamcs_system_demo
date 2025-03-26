@@ -1,0 +1,2 @@
+/usr/bin/ar qc ../../../lib/Linux/libOs_Memory_Stub.a CMakeFiles/Os_Memory_Stub.dir/Memory.cpp.o
+/usr/bin/ranlib ../../../lib/Linux/libOs_Memory_Stub.a

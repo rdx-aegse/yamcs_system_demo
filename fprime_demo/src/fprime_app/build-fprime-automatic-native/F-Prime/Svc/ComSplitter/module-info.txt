@@ -1,0 +1,5 @@
+
+/home/rdx/software/test/yamcs_system_demo/fprime_demo/src/fprime_app/fprime/Svc/ComSplitter/ComSplitter.cpp
+/home/rdx/software/test/yamcs_system_demo/fprime_demo/src/fprime_app/build-fprime-automatic-native/F-Prime/Svc/ComSplitter/ComSplitterComponentAi.xml;/home/rdx/software/test/yamcs_system_demo/fprime_demo/src/fprime_app/build-fprime-automatic-native/F-Prime/Svc/ComSplitter/ComSplitterComponentAc.cpp;/home/rdx/software/test/yamcs_system_demo/fprime_demo/src/fprime_app/build-fprime-automatic-native/F-Prime/Svc/ComSplitter/ComSplitterComponentAc.hpp
+/home/rdx/software/test/yamcs_system_demo/fprime_demo/src/fprime_app/fprime/Svc/ComSplitter/ComSplitter.fpp
+

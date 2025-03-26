@@ -1,29 +1,29 @@
 version: '3.8'  # Specify the version
 
 services:  
-  fprime_demo:
-      build:
-        context: ./fprime_demo
-      environment:
-        PORT_TC: 11000
-        PORT_TM: 11001
-        #PORT_EV: 10002
-        YAMCS_MDB: /mdb_shared
-      volumes:
-        - mdb_shared:/mdb_shared 
-      network_mode: "host" #Easier for a test
+  # fprime_demo:
+  #     build:
+  #       context: ./fprime_demo
+  #     environment:
+  #       PORT_TC: 11000
+  #       PORT_TM: 11001
+  #       #PORT_EV: 10002
+  #       YAMCS_MDB: /mdb_shared
+  #     volumes:
+  #       - mdb_shared:/mdb_shared 
+  #     network_mode: "host" #Easier for a test
 
-  # yamcs_link_demo:
-  #   build:
-  #     context: ./yamcs_link_demo
-  #   environment:
-  #     PORT_TC: 10000
-  #     PORT_TM: 10001
-  #     #PORT_EV: 10002
-  #     YAMCS_MDB: /mdb_shared
-  #   volumes:
-  #     - mdb_shared:/mdb_shared 
-  #   network_mode: "host" #Easier for a test
+  yamcs_link_demo:
+    build:
+      context: ./yamcs_link_demo
+    environment:
+      PORT_TC: 10000
+      PORT_TM: 10001
+      #PORT_EV: 10002
+      YAMCS_MDB: /mdb_shared
+    volumes:
+      - mdb_shared:/mdb_shared 
+    network_mode: "host" #Easier for a test
 
   yamcs_server:
     build:
@@ -36,7 +36,6 @@ services:
       PORT_FP_TC: 11000 #Must match PORT_CMD of fprime_demo
       PORT_FP_TM: 11001 #Must match PORT_TM of fprime_demo
       #PORT_FP_EV: 11002 #Must match PORT_EV of fprime_demo
-      YAMCS_MDB: /mdb_shared
     volumes:
       - mdb_shared:/mdb_shared  
     network_mode: "host"

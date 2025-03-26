@@ -1,0 +1,5 @@
+
+
+/home/rdx/software/test/yamcs_system_demo/fprime_demo/src/fprime_app/build-fprime-automatic-native/F-Prime/Svc/PolyIf/MeasurementStatusEnumAi.xml;/home/rdx/software/test/yamcs_system_demo/fprime_demo/src/fprime_app/build-fprime-automatic-native/F-Prime/Svc/PolyIf/PolyPortAi.xml;/home/rdx/software/test/yamcs_system_demo/fprime_demo/src/fprime_app/build-fprime-automatic-native/F-Prime/Svc/PolyIf/MeasurementStatusEnumAc.cpp;/home/rdx/software/test/yamcs_system_demo/fprime_demo/src/fprime_app/build-fprime-automatic-native/F-Prime/Svc/PolyIf/MeasurementStatusEnumAc.hpp;/home/rdx/software/test/yamcs_system_demo/fprime_demo/src/fprime_app/build-fprime-automatic-native/F-Prime/Svc/PolyIf/PolyPortAc.cpp;/home/rdx/software/test/yamcs_system_demo/fprime_demo/src/fprime_app/build-fprime-automatic-native/F-Prime/Svc/PolyIf/PolyPortAc.hpp
+/home/rdx/software/test/yamcs_system_demo/fprime_demo/src/fprime_app/fprime/Svc/PolyIf/PolyIf.fpp
+

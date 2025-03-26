@@ -1,0 +1,2 @@
+/home/rdx/software/test/yamcs_system_demo/fprime_demo/src/fprime_app/fprime/Drv/Interfaces/I2cInterface.fppi
+/home/rdx/software/test/yamcs_system_demo/fprime_demo/src/fprime_app/fprime/Drv/Ports/I2cDriverPorts.fpp

@@ -1,0 +1,5 @@
+
+/home/rdx/software/test/yamcs_system_demo/fprime_demo/src/fprime_app/fprime/Svc/ComStub/ComStub.cpp
+/home/rdx/software/test/yamcs_system_demo/fprime_demo/src/fprime_app/build-fprime-automatic-native/F-Prime/Svc/ComStub/ComStubComponentAi.xml;/home/rdx/software/test/yamcs_system_demo/fprime_demo/src/fprime_app/build-fprime-automatic-native/F-Prime/Svc/ComStub/ComStubComponentAc.cpp;/home/rdx/software/test/yamcs_system_demo/fprime_demo/src/fprime_app/build-fprime-automatic-native/F-Prime/Svc/ComStub/ComStubComponentAc.hpp
+/home/rdx/software/test/yamcs_system_demo/fprime_demo/src/fprime_app/fprime/Svc/ComStub/ComStub.fpp;/home/rdx/software/test/yamcs_system_demo/fprime_demo/src/fprime_app/fprime/Svc/Interfaces/ComInterface.fppi
+

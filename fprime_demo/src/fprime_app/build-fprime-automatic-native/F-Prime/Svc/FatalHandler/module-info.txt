@@ -1,0 +1,5 @@
+
+/home/rdx/software/test/yamcs_system_demo/fprime_demo/src/fprime_app/fprime/Svc/FatalHandler/FatalHandlerComponentCommonImpl.cpp;/home/rdx/software/test/yamcs_system_demo/fprime_demo/src/fprime_app/fprime/Svc/FatalHandler/FatalHandlerComponentLinuxImpl.cpp
+/home/rdx/software/test/yamcs_system_demo/fprime_demo/src/fprime_app/build-fprime-automatic-native/F-Prime/Svc/FatalHandler/FatalHandlerComponentAi.xml;/home/rdx/software/test/yamcs_system_demo/fprime_demo/src/fprime_app/build-fprime-automatic-native/F-Prime/Svc/FatalHandler/FatalHandlerComponentAc.cpp;/home/rdx/software/test/yamcs_system_demo/fprime_demo/src/fprime_app/build-fprime-automatic-native/F-Prime/Svc/FatalHandler/FatalHandlerComponentAc.hpp
+/home/rdx/software/test/yamcs_system_demo/fprime_demo/src/fprime_app/fprime/Svc/FatalHandler/FatalHandler.fpp
+Os;Fw/Logger

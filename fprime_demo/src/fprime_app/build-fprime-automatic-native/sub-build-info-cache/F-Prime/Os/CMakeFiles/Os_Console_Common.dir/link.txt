@@ -1,0 +1,2 @@
+/usr/bin/ar qc ../../lib/Linux/libOs_Console_Common.a CMakeFiles/Os_Console_Common.dir/__/cmake/empty.cpp.o
+/usr/bin/ranlib ../../lib/Linux/libOs_Console_Common.a

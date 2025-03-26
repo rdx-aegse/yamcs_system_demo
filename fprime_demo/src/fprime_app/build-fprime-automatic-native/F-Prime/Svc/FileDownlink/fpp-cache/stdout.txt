@@ -1,0 +1,10 @@
+/home/rdx/software/test/yamcs_system_demo/fprime_demo/src/fprime_app/fprime/Fw/Buffer/Buffer.fpp
+/home/rdx/software/test/yamcs_system_demo/fprime_demo/src/fprime_app/fprime/Fw/Cmd/Cmd.fpp
+/home/rdx/software/test/yamcs_system_demo/fprime_demo/src/fprime_app/fprime/Fw/Log/Log.fpp
+/home/rdx/software/test/yamcs_system_demo/fprime_demo/src/fprime_app/fprime/Fw/Time/Time.fpp
+/home/rdx/software/test/yamcs_system_demo/fprime_demo/src/fprime_app/fprime/Fw/Tlm/Tlm.fpp
+/home/rdx/software/test/yamcs_system_demo/fprime_demo/src/fprime_app/fprime/Svc/FileDownlinkPorts/FileDownlinkPorts.fpp
+/home/rdx/software/test/yamcs_system_demo/fprime_demo/src/fprime_app/fprime/Svc/Ping/Ping.fpp
+/home/rdx/software/test/yamcs_system_demo/fprime_demo/src/fprime_app/fprime/Svc/Sched/Sched.fpp
+/home/rdx/software/test/yamcs_system_demo/fprime_demo/src/fprime_app/fprime/config/AcConstants.fpp
+/home/rdx/software/test/yamcs_system_demo/fprime_demo/src/fprime_app/fprime/config/FpConfig.fpp

@@ -1,0 +1,2 @@
+/usr/bin/ar qc ../../../lib/Linux/libOs_File_Posix.a CMakeFiles/Os_File_Posix.dir/__/__/cmake/empty.cpp.o
+/usr/bin/ranlib ../../../lib/Linux/libOs_File_Posix.a

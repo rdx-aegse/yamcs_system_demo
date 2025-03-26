@@ -1,0 +1,2 @@
+/usr/bin/ar qc ../../../lib/Linux/libOs_Task_Stub.a CMakeFiles/Os_Task_Stub.dir/Task.cpp.o
+/usr/bin/ranlib ../../../lib/Linux/libOs_Task_Stub.a

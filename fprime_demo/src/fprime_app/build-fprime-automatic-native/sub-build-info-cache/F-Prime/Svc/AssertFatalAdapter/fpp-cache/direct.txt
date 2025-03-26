@@ -1,0 +1,3 @@
+/home/rdx/software/test/yamcs_system_demo/fprime_demo/src/fprime_app/fprime/Fw/Log/Log.fpp
+/home/rdx/software/test/yamcs_system_demo/fprime_demo/src/fprime_app/fprime/Svc/AssertFatalAdapter/AssertFatalEvents.fppi
+/home/rdx/software/test/yamcs_system_demo/fprime_demo/src/fprime_app/fprime/config/AcConstants.fpp

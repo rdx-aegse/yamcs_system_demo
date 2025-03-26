@@ -1,11 +1,14 @@
-from yamcs_link.yamcs_userlib import YAMCSObject, telemetry, telecommand, event, U8, U16, F32, I16
+import yamcs_link
+from yamcs_link.yamcs_userlib import EventSeverity, YAMCSObject, telemetry, telecommand, event, U8, U16, F32, I16
 from yamcs_link.yamcs_link import YAMCS_link
 from enum import Enum
 from typing import override
 import os
+import time
 
 MDB_NAME = "YAMCS_link_demo" #Desired name of the YAMCS mission database for this demo
 MDB_VERSION = "1.0" #Unused here, needed by YAMCS mission generator. Simply shown in the MDB 
+YAMCS_MDB_DIR = '/mdb_shared' #Output folder for the YAMCS mission databases
 
 #Dummy example app definition
 
@@ -42,13 +45,13 @@ class MyComponent(YAMCSObject):
         return f'Dummy event triggered with arguments arg1={arg1} and arg2={arg2}'
     
 #initialisation
-yamcs_link = YAMCS_link("my_link", tcp_port=os.environ.get('PORT_TC'), udp_port=os.environ.get('PORT_TM')) 
+yamcs_link = YAMCS_link("my_link", tcp_port=int(os.environ.get('PORT_TC')), udp_port=int(os.environ.get('PORT_TM'))) 
 my_component = MyComponent("component1")
 yamcs_link.register_yamcs_child(my_component)
 
 #Generate mdb is necessary for YAMCS to know how to interact with the app. 
 # Make sure there is an automated process for yamcs to start up from those updated mdb
-yamcs_link.generate_mdb(os.environ.get('YAMCS_MDB'), MDB_NAME, MDB_VERSION) 
+yamcs_link.generate_mdb(YAMCS_MDB_DIR, MDB_NAME, MDB_VERSION) 
 #If the mdb is generated through some other scheme, manually do call update_index() between register_yamcs_child() and service()
 
 # Main loop

@@ -1,0 +1,5 @@
+
+/home/rdx/software/test/yamcs_system_demo/fprime_demo/src/fprime_app/fprime/Svc/ComLogger/ComLogger.cpp
+/home/rdx/software/test/yamcs_system_demo/fprime_demo/src/fprime_app/build-fprime-automatic-native/F-Prime/Svc/ComLogger/ComLoggerComponentAi.xml;/home/rdx/software/test/yamcs_system_demo/fprime_demo/src/fprime_app/build-fprime-automatic-native/F-Prime/Svc/ComLogger/ComLoggerComponentAc.cpp;/home/rdx/software/test/yamcs_system_demo/fprime_demo/src/fprime_app/build-fprime-automatic-native/F-Prime/Svc/ComLogger/ComLoggerComponentAc.hpp
+/home/rdx/software/test/yamcs_system_demo/fprime_demo/src/fprime_app/fprime/Svc/ComLogger/ComLogger.fpp;/home/rdx/software/test/yamcs_system_demo/fprime_demo/src/fprime_app/fprime/Svc/ComLogger/Commands.fppi;/home/rdx/software/test/yamcs_system_demo/fprime_demo/src/fprime_app/fprime/Svc/ComLogger/Events.fppi
+

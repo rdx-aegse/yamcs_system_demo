@@ -1,0 +1,2 @@
+/usr/bin/ar qc ../../lib/Linux/libOs_Cpu_Common.a CMakeFiles/Os_Cpu_Common.dir/Cpu.cpp.o
+/usr/bin/ranlib ../../lib/Linux/libOs_Cpu_Common.a

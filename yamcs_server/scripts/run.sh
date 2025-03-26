@@ -10,3 +10,5 @@
 cd /yamcs_cont/yamcs_repo
 mvn yamcs:run
 
+echo 'Exiting YAMCS server'
+

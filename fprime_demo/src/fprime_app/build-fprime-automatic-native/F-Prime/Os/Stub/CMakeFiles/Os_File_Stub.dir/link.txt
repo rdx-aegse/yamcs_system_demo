@@ -1,0 +1,2 @@
+/usr/bin/ar qc ../../../lib/Linux/libOs_File_Stub.a CMakeFiles/Os_File_Stub.dir/File.cpp.o CMakeFiles/Os_File_Stub.dir/FileSystem.cpp.o CMakeFiles/Os_File_Stub.dir/Directory.cpp.o
+/usr/bin/ranlib ../../../lib/Linux/libOs_File_Stub.a
