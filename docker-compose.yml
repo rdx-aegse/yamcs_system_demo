@@ -5,26 +5,25 @@ services:
       build:
         context: ./fprime_demo
       environment:
-        PORT_TC: 10000
-        PORT_TM: 10001
+        PORT_TC: 11000
+        PORT_TM: 11001
         #PORT_EV: 10002
-        FP_ARTIFACTS: /src/fprime_app/ #TODO: complete this path
         YAMCS_MDB: /mdb_shared
       volumes:
         - mdb_shared:/mdb_shared 
       network_mode: "host" #Easier for a test
 
-  yamcs_link_demo:
-    build:
-      context: ./yamcs_link_demo
-    environment:
-      PORT_TC: 10000
-      PORT_TM: 10001
-      #PORT_EV: 10002
-      YAMCS_MDB: /mdb_shared
-    volumes:
-      - mdb_shared:/mdb_shared 
-    network_mode: "host" #Easier for a test
+  # yamcs_link_demo:
+  #   build:
+  #     context: ./yamcs_link_demo
+  #   environment:
+  #     PORT_TC: 10000
+  #     PORT_TM: 10001
+  #     #PORT_EV: 10002
+  #     YAMCS_MDB: /mdb_shared
+  #   volumes:
+  #     - mdb_shared:/mdb_shared 
+  #   network_mode: "host" #Easier for a test
 
   yamcs_server:
     build:
