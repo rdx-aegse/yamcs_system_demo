@@ -11,5 +11,5 @@ fprime-util build -j8
 python3 /fprime2yamcs/main.py --fprime-artifacts "/fprime_app/build-artifacts/Linux/demo/dict" --fprime-topology "/fprime_app/demo/Top" --yamcs-mdb "/mdb_shared"
 
 #Run deployment
-#chmod +x build-artifacts/Linux/Ref/bin/Ref
-#./build-artifacts/Linux/Ref/bin/Ref -a "127.0.0.1" -p $PORT_TC #TODO: update name/path if needed, and add PORT_TM (potentially PORT_EV)
+chmod +x build-artifacts/Linux/demo/bin/demo
+./build-artifacts/Linux/demo/bin/demo -a "127.0.0.1" -p $PORT_TC #TODO:add PORT_TM (potentially PORT_EV)
