@@ -9,4 +9,3 @@
 [submodule "fprime_demo/src/fprime_app/fprime"]
 	path = fprime_demo/src/fprime_app/fprime
 	url = https://github.com/nasa/fprime.git
-	branch = main
