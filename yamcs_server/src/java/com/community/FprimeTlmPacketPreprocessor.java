@@ -109,7 +109,7 @@ public class FprimeTlmPacketPreprocessor extends AbstractPacketPreprocessor {
         bb.get(tmData);
 
         //Debug
-        log.warn("Packet type: {}, ID: {}, payload: {}", packet.length, packetTypeId, packetId, tmData);
+        //log.warn("Packet type: {}, ID: {}, payload: {}", packet.length, packetTypeId, packetId, tmData);
 
         // TODO: check checksum
 
