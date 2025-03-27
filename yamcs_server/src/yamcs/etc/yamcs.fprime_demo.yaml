@@ -35,22 +35,19 @@ dataLinks:
     stream: tc_stream
     host: localhost
     port: ${env.PORT_FP_TC} 
-    commandPostprocessorClassName: com.community.SimplestCommandPostprocessor #custom postprocessor
+    commandPostprocessorClassName: com.community.SimplestCommandPostprocessor 
     
   - name: udp-in
     class: org.yamcs.tctm.UdpTmDataLink
     stream: tm_stream
     port: ${env.PORT_FP_TM} 
-    packetPreprocessorClassName: com.community.SimplestPacketPreprocessor #custom preprocessor
+    packetPreprocessorClassName: com.community.FprimeTlmPacketPreprocessor
 
 mdb:
-  # Configuration of the active loaders
-  # Valid loaders are: sheet, xtce or fully qualified name of the class
   - type: sheet
     args:
       file: /mdb_shared/demo.xls #matches location where mdb is generated
 
-# Configuration for streams created at server startup
 streamConfig:
   tm:
     - name: "tm_stream"
