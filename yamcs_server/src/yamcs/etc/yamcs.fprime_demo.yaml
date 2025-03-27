@@ -34,26 +34,29 @@ dataLinks:
     class: org.yamcs.tctm.TcpTcDataLink
     stream: tc_stream
     host: localhost
-    port: ${env.PORT_YL_TC} 
-    commandPostprocessorClassName: com.community.SimplestCommandPostprocessor 
+    port: ${env.PORT_FP_TC} 
+    commandPostprocessorClassName: com.community.SimplestCommandPostprocessor #custom postprocessor
     
-  - name: udp-in
-    class: org.yamcs.tctm.UdpTmDataLink
+  - name: tcp-in
+    class: org.yamcs.tctm.TcpTmDataLink
     stream: tm_stream
-    port: ${env.PORT_YL_TM} 
-    packetPreprocessorClassName: com.community.SimplestPacketPreprocessor 
+    host: localhost
+    port: ${env.PORT_FP_TM} 
+    packetPreprocessorClassName: com.community.SimplestPacketPreprocessor #custom preprocessor
 
 mdb:
+  # Configuration of the active loaders
+  # Valid loaders are: sheet, xtce or fully qualified name of the class
   - type: sheet
     args:
-      file: /mdb_shared/YAMCS_link_demo.xls #matches location where mdb is generated and yamcs_link mdb name
+      file: /mdb_shared/demo.xls #matches location where mdb is generated
 
 # Configuration for streams created at server startup
 streamConfig:
   tm:
     - name: "tm_stream"
       processor: "realtime"
-      rootContainer: "/YAMCS_link_demo/PKT" #matches mdb name and root packet entry in mdb
+      rootContainer: "/demo/PKT" #matches root container and root packet entry in mdb
   cmdHist: ["cmdhist_realtime", "cmdhist_dump"]
   event: ["events_realtime", "events_dump"]
   param: ["pp_realtime", "pp_dump", "sys_param", "proc_param"]
@@ -61,4 +64,4 @@ streamConfig:
   tc:
     - name: "tc_stream"
       processor: "realtime"
-      tcPatterns: ["/YAMCS_link_demo/.*"] #matches name of mdb (which is identical to root container in it)
+      tcPatterns: ["/demo/.*"] #matches name of mdb (which is identical to root container in it)
