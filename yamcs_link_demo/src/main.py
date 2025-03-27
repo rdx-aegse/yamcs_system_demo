@@ -1,10 +1,11 @@
-import yamcs_link
+import logging
 from yamcs_link.yamcs_userlib import EventSeverity, YAMCSObject, telemetry, telecommand, event, U8, U16, F32, I16
 from yamcs_link.yamcs_link import YAMCS_link
 from enum import Enum
 from typing import override
-import os
 import time
+
+import os
 
 MDB_NAME = "YAMCS_link_demo" #Desired name of the YAMCS mission database for this demo
 MDB_VERSION = "1.0" #Unused here, needed by YAMCS mission generator. Simply shown in the MDB 
