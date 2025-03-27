@@ -6,7 +6,7 @@
 // Provides access to autocoded functions
 #include <demo/Top/demoTopologyAc.hpp>
 // Note: Uncomment when using Svc:TlmPacketizer
-//#include <demo/Top/demoPacketsAc.hpp>
+#include <demo/Top/demoPacketsAc.hpp>
 
 // Necessary project-specified types
 #include <Fw/Types/MallocAllocator.hpp>
@@ -119,7 +119,7 @@ void configureTopology(const TopologyState& state) {
     health.setPingEntries(pingEntries, FW_NUM_ARRAY_ELEMENTS(pingEntries), HEALTH_WATCHDOG_CODE);
 
     // Note: Uncomment when using Svc:TlmPacketizer
-    // tlmSend.setPacketList(demoPacketsPkts, demoPacketsIgnore, 1);
+    tlmSend.setPacketList(demoPacketsPkts, demoPacketsIgnore, 1);
 
     // Events (highest-priority)
     configurationTable.entries[0] = {.depth = 100, .priority = 0};
