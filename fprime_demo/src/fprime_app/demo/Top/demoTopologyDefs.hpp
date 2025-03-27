@@ -24,7 +24,8 @@ namespace demo {
  */
 struct TopologyState {
     const CHAR* hostname;
-    U16 port;
+    U16 tc_port;
+    U16 tm_port;
 };
 
 /**

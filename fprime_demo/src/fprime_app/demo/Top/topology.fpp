@@ -21,9 +21,9 @@ module demo {
     instance tlmSend
     instance cmdDisp
     instance cmdSeq
-    instance comDriver
+    instance tcDriver
     instance comQueue
-    instance comStub
+    instance tcComStub
     instance deframer
     instance eventLogger
     instance fatalAdapter
@@ -41,6 +41,8 @@ module demo {
     instance rateGroupDriver
     instance textLogger
     instance systemResources
+    instance tmDriver
+    instance tmComStub
 
     # ----------------------------------------------------------------------
     # Pattern graph specifiers
@@ -74,15 +76,15 @@ module demo {
       comQueue.buffQueueSend -> framer.bufferIn
 
       framer.framedAllocate -> bufferManager.bufferGetCallee
-      framer.framedOut -> comStub.comDataIn
+      framer.framedOut -> tmComStub.comDataIn
       framer.bufferDeallocate -> fileDownlink.bufferReturn
 
-      comDriver.deallocate -> bufferManager.bufferSendIn
-      comDriver.ready -> comStub.drvConnected
+      tmDriver.deallocate -> bufferManager.bufferSendIn
+      tmDriver.ready -> tmComStub.drvConnected
 
-      comStub.comStatus -> framer.comStatusIn
+      tmComStub.comStatus -> framer.comStatusIn
       framer.comStatusOut -> comQueue.comStatusIn
-      comStub.drvDataOut -> comDriver.$send
+      tmComStub.drvDataOut -> tmDriver.$send
 
     }
 
@@ -118,9 +120,9 @@ module demo {
 
     connections Uplink {
 
-      comDriver.allocate -> bufferManager.bufferGetCallee
-      comDriver.$recv -> comStub.drvDataIn
-      comStub.comDataOut -> deframer.framedIn
+      tcDriver.allocate -> bufferManager.bufferGetCallee
+      tcDriver.$recv -> tcComStub.drvDataIn
+      tcComStub.comDataOut -> deframer.framedIn
 
       deframer.framedDeallocate -> bufferManager.bufferSendIn
       deframer.comOut -> cmdDisp.seqCmdBuff

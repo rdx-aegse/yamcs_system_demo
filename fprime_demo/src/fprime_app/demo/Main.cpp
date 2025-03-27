@@ -22,7 +22,7 @@
  * @param app: name of application
  */
 void print_usage(const char* app) {
-    (void)printf("Usage: ./%s [options]\n-a\thostname/IP address\n-p\tport_number\n", app);
+    (void)printf("Usage: ./%s [options]\n-a\thostname/IP address\n-c\tTC port_number\n-m\tTM port_number", app);
 }
 
 /**
@@ -50,19 +50,23 @@ static void signalHandler(int signum) {
 int main(int argc, char* argv[]) {
     I32 option = 0;
     CHAR* hostname = nullptr;
-    U16 port_number = 0;
+    U16 tc_port_number = 0;
+    U16 tm_port_number = 0;
     Os::init();
 
     // Loop while reading the getopt supplied options
-    while ((option = getopt(argc, argv, "hp:a:")) != -1) {
+    while ((option = getopt(argc, argv, "hc:a:m:")) != -1) {
         switch (option) {
             // Handle the -a argument for address/hostname
             case 'a':
                 hostname = optarg;
                 break;
             // Handle the -p port number argument
-            case 'p':
-                port_number = static_cast<U16>(atoi(optarg));
+            case 'c':
+                tc_port_number = static_cast<U16>(atoi(optarg));
+                break;
+            case 'm':
+                tm_port_number = static_cast<U16>(atoi(optarg));
                 break;
             // Cascade intended: help output
             case 'h':
@@ -77,7 +81,8 @@ int main(int argc, char* argv[]) {
     // Object for communicating state to the reference topology
     demo::TopologyState inputs;
     inputs.hostname = hostname;
-    inputs.port = port_number;
+    inputs.tc_port = tc_port_number;
+    inputs.tm_port = tm_port_number;
 
     // Setup program shutdown via Ctrl-C
     signal(SIGINT, signalHandler);

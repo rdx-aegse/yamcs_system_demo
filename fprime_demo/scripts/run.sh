@@ -12,4 +12,4 @@ python3 /fprime2yamcs/main.py --fprime-artifacts "/fprime_app/build-artifacts/Li
 
 #Run deployment
 chmod +x build-artifacts/Linux/demo/bin/demo
-./build-artifacts/Linux/demo/bin/demo -a "127.0.0.1" -p $PORT_TC #TODO:add PORT_TM (potentially PORT_EV)
+./build-artifacts/Linux/demo/bin/demo -a "127.0.0.1" -c $PORT_TC -m $PORT_TM #TODO:add potentially PORT_EV since TM is UDP

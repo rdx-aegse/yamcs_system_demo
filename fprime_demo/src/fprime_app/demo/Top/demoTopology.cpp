@@ -129,8 +129,15 @@ void configureTopology(const TopologyState& state) {
     configurationTable.entries[2] = {.depth = 100, .priority = 1};
     // Allocation identifier is 0 as the MallocAllocator discards it
     comQueue.configure(configurationTable, 0, mallocator);
-    if (state.hostname != nullptr && state.port != 0) {
-        comDriver.configure(state.hostname, state.port);
+
+    if (state.hostname != nullptr) {
+        if(state.tc_port != 0) {
+            tcDriver.configure(state.hostname, state.tc_port);
+        }
+        if(state.tm_port != 0) {
+            tmDriver.configureSend(state.hostname, state.tm_port);
+            tmDriver.open();
+        }
     }
 }
 
@@ -154,10 +161,10 @@ void setupTopology(const TopologyState& state) {
     // Autocoded task kick-off (active components). Function provided by autocoder.
     startTasks(state);
     // Initialize socket communication if and only if there is a valid specification
-    if (state.hostname != nullptr && state.port != 0) {
+    if (state.hostname != nullptr && state.tc_port != 0) {
         Os::TaskString name("ReceiveTask");
         // Uplink is configured for receive so a socket task is started
-        comDriver.start(name, COMM_PRIORITY, Default::STACK_SIZE);
+        tcDriver.start(name, COMM_PRIORITY, Default::STACK_SIZE);
     }
 }
 
@@ -193,8 +200,8 @@ void teardownTopology(const TopologyState& state) {
     freeThreads(state);
 
     // Other task clean-up.
-    comDriver.stop();
-    (void)comDriver.join();
+    tcDriver.stop();
+    (void)tcDriver.join();
 
     // Resource deallocation
     cmdSeq.deallocateBuffer(mallocator);

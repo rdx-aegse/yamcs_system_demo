@@ -37,10 +37,9 @@ dataLinks:
     port: ${env.PORT_FP_TC} 
     commandPostprocessorClassName: com.community.SimplestCommandPostprocessor #custom postprocessor
     
-  - name: tcp-in
-    class: org.yamcs.tctm.TcpTmDataLink
+  - name: udp-in
+    class: org.yamcs.tctm.UdpTmDataLink
     stream: tm_stream
-    host: localhost
     port: ${env.PORT_FP_TM} 
     packetPreprocessorClassName: com.community.SimplestPacketPreprocessor #custom preprocessor
 

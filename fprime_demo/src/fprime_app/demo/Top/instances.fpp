@@ -99,7 +99,7 @@ module demo {
   # ----------------------------------------------------------------------
 
   @ Communications driver. May be swapped with other com drivers like UART or TCP
-  instance comDriver: Drv.TcpServer base id 0x4000
+  instance tcDriver: Drv.TcpServer base id 0x4000
 
   instance framer: Svc.Framer base id 0x4100
 
@@ -119,6 +119,9 @@ module demo {
 
   instance systemResources: Svc.SystemResources base id 0x4A00
 
-  instance comStub: Svc.ComStub base id 0x4B00
+  instance tcComStub: Svc.ComStub base id 0x4B00
 
+  instance tmDriver: Drv.Udp base id 0x4C00
+
+  instance tmComStub: Svc.ComStub base id 0x4D00
 }
