@@ -26,7 +26,7 @@ services:
   - class: com.community.SimplestEventDecodingService
     args:
       stream: tm_stream
-      nBytesSource: 80
+      nBytesSource: 0 #Does not send any source component str
       nBytesMsg: 256
 
 dataLinks:
@@ -41,7 +41,7 @@ dataLinks:
     class: org.yamcs.tctm.UdpTmDataLink
     stream: tm_stream
     port: ${env.PORT_FP_TM} 
-    packetPreprocessorClassName: com.community.FprimeTlmPacketPreprocessor
+    packetPreprocessorClassName: com.community.FprimePacketPreprocessor
 
 mdb:
   - type: sheet

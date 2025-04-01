@@ -33,9 +33,10 @@ public class SimplestEventDecodingService extends AbstractYamcsService implement
 
     private static final int PACKETTYPE = 2;
     private static final ByteOrder ENDIANNESS = ByteOrder.BIG_ENDIAN;
+    //Only change  those in concert with getInt(), getShort() etc.
     private static final int N_BYTES_PACKETTYPE = 4;
-    private static final int N_BYTES_PACKETID = 4;
-    private static final int N_BYTES_SEVERITY = 1;
+    private static final int N_BYTES_PACKETID = 2;
+    private static final int N_BYTES_SEVERITY = 4;
 
     @Override
     public Spec getSpec() {
@@ -112,10 +113,12 @@ public class SimplestEventDecodingService extends AbstractYamcsService implement
             return;
         }
 
-        buffer.position(N_BYTES_PACKETTYPE + N_BYTES_PACKETID);
-        int severity = buffer.get();
+        buffer.position(N_BYTES_PACKETTYPE); //Packettype has already been used, ignore it
+        int packet_id = buffer.getShort();
+        int severity = buffer.getInt();
+        String source = "";
         if(nBytesSource) {
-            String source = readString(buffer, nBytesSource);
+            source = readString(buffer, nBytesSource);
         }
         String message = readString(buffer, nBytesMsg);
 
@@ -124,10 +127,10 @@ public class SimplestEventDecodingService extends AbstractYamcsService implement
         Event ev = Event.newBuilder()
                         .setGenerationTime(gentime)
                         .setReceptionTime(rectime)
-                        .setSeqNumber(0)
+                        .setSeqNumber(packet_id)
                         .setSource(source)
                         .setSeverity(EventSeverity.forNumber(severity))
-                        .setType("YAMCS_LINK")
+                        .setType("SimplestEventDecodingService")
                         .setMessage(message).build();
         eventProducer.sendEvent(ev);
     }

@@ -11,13 +11,13 @@ import org.yamcs.utils.TimeEncoding;
 
 /* Expected input:
 - 0xDEADBEEF 
-- 4 bytes packet size (without checksum but with packet type?) 
+- packet size (without checksum but with packet type?) 
 - packet
-    - 4 bytes packet type = 0x0001 for TM packets 
-    - 4 bytes TMpacket ID 
-    - 11 bytes time tag to ignore, we use the wall clock time instead 
+    - packet type = 0x0001 for TM packets 
+    - TMpacket ID 
+    - time tag to ignore, we use the wall clock time instead 
     - actual packet payload to return 
-- 4 bytes checksum */
+- checksum */
 
 /**
  * FprimePreprocessor is the class which extracts the telemetry from Fprime TM packets by stripping it clean from 
@@ -31,7 +31,7 @@ import org.yamcs.utils.TimeEncoding;
  * 
  * @author GM
  **/
-public class FprimeTlmPacketPreprocessor extends AbstractPacketPreprocessor {
+public class FprimePacketPreprocessor extends AbstractPacketPreprocessor {
     //Start word of the Fprime packet protocol
     private static final int SYNC_WORD = 0xDEADBEEF;
     //Number of bytes for the sync word. 
@@ -44,14 +44,14 @@ public class FprimeTlmPacketPreprocessor extends AbstractPacketPreprocessor {
     private static final int PACKET_SIZE_LENGTH = 4; //Warning: Only change in concert with the getInt() and getShort() methods here!
     //Number of bytes for the time tag field. 
     private static final int TIME_TAG_LENGTH = 11; //Ignored for now
-    //Number of bytes for the payload of the packet. 
+    //Number of bytes for the payload header in the packet. 
     //i.e. of what is returned by the 2nd Int (packet size), how much is not payload data
     private static final int PAYLOAD_HEADER_LENGTH = PACKET_TYPE_LENGTH + PACKET_ID_LENGTH + TIME_TAG_LENGTH; 
     //Number of bytes for the packet CRC field. 
     private static final int CRC_LENGTH = 4; // Only change in concert with the getInt() and getShort() method here!
     //Minimum number of bytes in a packet to trigger preprocessing - under that it is impossible to have a complete packet
     //Note: incomplete packets are still possible for packets with arguments, do check CRC
-    private static final int MIN_PACKET_LENGTH = SYNC_LENGTH+PAYLOAD_HEADER_LENGTH+CRC_LENGTH;
+    private static final int MIN_PACKET_LENGTH = SYNC_LENGTH+PACKET_SIZE_LENGTH+PAYLOAD_HEADER_LENGTH+CRC_LENGTH;
     //Endianness of what is received
     private static final ByteOrder ENDIANNESS = ByteOrder.BIG_ENDIAN;
 
@@ -60,7 +60,7 @@ public class FprimeTlmPacketPreprocessor extends AbstractPacketPreprocessor {
     private AtomicInteger seqCount = new AtomicInteger();
     private static final int MAX_SEQ_COUNT = 0x0000ffff;
 
-    public FprimeTlmPacketPreprocessor(String yamcsInstance) {
+    public FprimePacketPreprocessor(String yamcsInstance) {
         super(yamcsInstance, YConfiguration.emptyConfig());
     }
 
@@ -105,13 +105,13 @@ public class FprimeTlmPacketPreprocessor extends AbstractPacketPreprocessor {
         // Skip 11 bytes of time tag
         bb.position(bb.position() + TIME_TAG_LENGTH);
         // Extract actual packet data
-        byte[] tmData = new byte[packetSize-PAYLOAD_HEADER_LENGTH];
+        byte[] tmData = new byte[packetSize-PAYLOAD_HEADER_LENGTH-CRC_LENGTH];
         bb.get(tmData);
 
         //Debug
         //log.warn("Packet type: {}, ID: {}, payload: {}", packet.length, packetTypeId, packetId, tmData);
 
-        // TODO: check checksum
+        // TODO: check checksum after bb.getInt()
 
         // Create new TmPacket with extracted data
         ByteBuffer newBuffer = ByteBuffer.allocate(PACKET_TYPE_LENGTH + PACKET_ID_LENGTH + tmData.length);
