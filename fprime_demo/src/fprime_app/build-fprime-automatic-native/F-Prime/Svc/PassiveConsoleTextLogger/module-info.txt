@@ -1,5 +1,0 @@
-
-/home/hiladmin/test/yamcs_system_demo/fprime_demo/src/fprime_app/fprime/Svc/PassiveConsoleTextLogger/ConsoleTextLoggerImplCommon.cpp
-/home/hiladmin/test/yamcs_system_demo/fprime_demo/src/fprime_app/build-fprime-automatic-native/F-Prime/Svc/PassiveConsoleTextLogger/PassiveTextLoggerComponentAi.xml;/home/hiladmin/test/yamcs_system_demo/fprime_demo/src/fprime_app/build-fprime-automatic-native/F-Prime/Svc/PassiveConsoleTextLogger/PassiveTextLoggerComponentAc.cpp;/home/hiladmin/test/yamcs_system_demo/fprime_demo/src/fprime_app/build-fprime-automatic-native/F-Prime/Svc/PassiveConsoleTextLogger/PassiveTextLoggerComponentAc.hpp
-/home/hiladmin/test/yamcs_system_demo/fprime_demo/src/fprime_app/fprime/Svc/PassiveConsoleTextLogger/PassiveConsoleTextLogger.fpp
-Fw/Logger

@@ -1,5 +1,0 @@
-
-/home/hiladmin/test/yamcs_system_demo/fprime_demo/src/fprime_app/fprime/Svc/PassiveRateGroup/PassiveRateGroup.cpp;/home/hiladmin/test/yamcs_system_demo/fprime_demo/src/fprime_app/fprime/Svc/PassiveRateGroup/PassiveRateGroup.hpp
-/home/hiladmin/test/yamcs_system_demo/fprime_demo/src/fprime_app/build-fprime-automatic-native/F-Prime/Svc/PassiveRateGroup/PassiveRateGroupComponentAi.xml;/home/hiladmin/test/yamcs_system_demo/fprime_demo/src/fprime_app/build-fprime-automatic-native/F-Prime/Svc/PassiveRateGroup/PassiveRateGroupComponentAc.cpp;/home/hiladmin/test/yamcs_system_demo/fprime_demo/src/fprime_app/build-fprime-automatic-native/F-Prime/Svc/PassiveRateGroup/PassiveRateGroupComponentAc.hpp
-/home/hiladmin/test/yamcs_system_demo/fprime_demo/src/fprime_app/fprime/Svc/PassiveRateGroup/PassiveRateGroup.fpp
-

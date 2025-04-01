@@ -1,3 +1,0 @@
-/home/hiladmin/test/yamcs_system_demo/fprime_demo/src/fprime_app/fprime/Drv/Interfaces/SpiInterface.fppi
-/home/hiladmin/test/yamcs_system_demo/fprime_demo/src/fprime_app/fprime/Drv/LinuxSpiDriver/Events.fppi
-/home/hiladmin/test/yamcs_system_demo/fprime_demo/src/fprime_app/fprime/Drv/LinuxSpiDriver/Telemetry.fppi

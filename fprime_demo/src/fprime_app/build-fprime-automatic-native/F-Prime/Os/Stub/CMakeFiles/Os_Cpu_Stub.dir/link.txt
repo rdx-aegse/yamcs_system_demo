@@ -1,2 +1,0 @@
-/usr/bin/ar qc ../../../lib/Linux/libOs_Cpu_Stub.a CMakeFiles/Os_Cpu_Stub.dir/Cpu.cpp.o
-/usr/bin/ranlib ../../../lib/Linux/libOs_Cpu_Stub.a

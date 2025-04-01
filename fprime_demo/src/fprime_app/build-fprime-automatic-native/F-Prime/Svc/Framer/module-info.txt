@@ -1,5 +1,0 @@
-
-/home/hiladmin/test/yamcs_system_demo/fprime_demo/src/fprime_app/fprime/Svc/Framer/Framer.cpp
-/home/hiladmin/test/yamcs_system_demo/fprime_demo/src/fprime_app/build-fprime-automatic-native/F-Prime/Svc/Framer/FramerComponentAi.xml;/home/hiladmin/test/yamcs_system_demo/fprime_demo/src/fprime_app/build-fprime-automatic-native/F-Prime/Svc/Framer/FramerComponentAc.cpp;/home/hiladmin/test/yamcs_system_demo/fprime_demo/src/fprime_app/build-fprime-automatic-native/F-Prime/Svc/Framer/FramerComponentAc.hpp
-/home/hiladmin/test/yamcs_system_demo/fprime_demo/src/fprime_app/fprime/Svc/Framer/Framer.fpp
-Svc/FramingProtocol

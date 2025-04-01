@@ -1,5 +1,0 @@
-
-
-/home/hiladmin/test/yamcs_system_demo/fprime_demo/src/fprime_app/build-fprime-automatic-native/F-Prime/Svc/Ping/PingPortAi.xml;/home/hiladmin/test/yamcs_system_demo/fprime_demo/src/fprime_app/build-fprime-automatic-native/F-Prime/Svc/Ping/PingPortAc.cpp;/home/hiladmin/test/yamcs_system_demo/fprime_demo/src/fprime_app/build-fprime-automatic-native/F-Prime/Svc/Ping/PingPortAc.hpp
-/home/hiladmin/test/yamcs_system_demo/fprime_demo/src/fprime_app/fprime/Svc/Ping/Ping.fpp
-Fw/Port

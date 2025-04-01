@@ -1,5 +1,0 @@
-
-/home/hiladmin/test/yamcs_system_demo/fprime_demo/src/fprime_app/fprime/Drv/TcpClient/TcpClientComponentImpl.cpp
-/home/hiladmin/test/yamcs_system_demo/fprime_demo/src/fprime_app/build-fprime-automatic-native/F-Prime/Drv/TcpClient/TcpClientComponentAi.xml;/home/hiladmin/test/yamcs_system_demo/fprime_demo/src/fprime_app/build-fprime-automatic-native/F-Prime/Drv/TcpClient/TcpClientComponentAc.cpp;/home/hiladmin/test/yamcs_system_demo/fprime_demo/src/fprime_app/build-fprime-automatic-native/F-Prime/Drv/TcpClient/TcpClientComponentAc.hpp
-/home/hiladmin/test/yamcs_system_demo/fprime_demo/src/fprime_app/fprime/Drv/TcpClient/TcpClient.fpp;/home/hiladmin/test/yamcs_system_demo/fprime_demo/src/fprime_app/fprime/Drv/Interfaces/ByteStreamDriverInterface.fppi
-Fw/Logger;Drv/ByteStreamDriverModel;Drv/Ip

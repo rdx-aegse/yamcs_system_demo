@@ -1,2 +1,0 @@
-/usr/bin/ar qc ../../../lib/Linux/libOs_Console_Posix.a CMakeFiles/Os_Console_Posix.dir/Console.cpp.o
-/usr/bin/ranlib ../../../lib/Linux/libOs_Console_Posix.a

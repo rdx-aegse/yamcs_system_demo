@@ -1,2 +1,0 @@
-/usr/bin/ar qc ../../lib/Linux/libOs_Mutex_Common.a CMakeFiles/Os_Mutex_Common.dir/__/cmake/empty.cpp.o
-/usr/bin/ranlib ../../lib/Linux/libOs_Mutex_Common.a

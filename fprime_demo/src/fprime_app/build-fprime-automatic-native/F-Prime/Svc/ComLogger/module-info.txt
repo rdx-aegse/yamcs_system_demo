@@ -1,5 +1,0 @@
-
-/home/hiladmin/test/yamcs_system_demo/fprime_demo/src/fprime_app/fprime/Svc/ComLogger/ComLogger.cpp
-/home/hiladmin/test/yamcs_system_demo/fprime_demo/src/fprime_app/build-fprime-automatic-native/F-Prime/Svc/ComLogger/ComLoggerComponentAi.xml;/home/hiladmin/test/yamcs_system_demo/fprime_demo/src/fprime_app/build-fprime-automatic-native/F-Prime/Svc/ComLogger/ComLoggerComponentAc.cpp;/home/hiladmin/test/yamcs_system_demo/fprime_demo/src/fprime_app/build-fprime-automatic-native/F-Prime/Svc/ComLogger/ComLoggerComponentAc.hpp
-/home/hiladmin/test/yamcs_system_demo/fprime_demo/src/fprime_app/fprime/Svc/ComLogger/ComLogger.fpp;/home/hiladmin/test/yamcs_system_demo/fprime_demo/src/fprime_app/fprime/Svc/ComLogger/Commands.fppi;/home/hiladmin/test/yamcs_system_demo/fprime_demo/src/fprime_app/fprime/Svc/ComLogger/Events.fppi
-

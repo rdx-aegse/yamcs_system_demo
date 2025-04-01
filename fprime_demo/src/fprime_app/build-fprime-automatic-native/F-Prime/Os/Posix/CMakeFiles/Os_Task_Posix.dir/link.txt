@@ -1,2 +1,0 @@
-/usr/bin/ar qc ../../../lib/Linux/libOs_Task_Posix.a CMakeFiles/Os_Task_Posix.dir/Task.cpp.o
-/usr/bin/ranlib ../../../lib/Linux/libOs_Task_Posix.a

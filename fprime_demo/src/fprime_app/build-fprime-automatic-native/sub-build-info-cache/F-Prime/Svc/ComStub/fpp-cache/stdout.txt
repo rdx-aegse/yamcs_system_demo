@@ -1,4 +1,0 @@
-/home/hiladmin/test/yamcs_system_demo/fprime_demo/src/fprime_app/fprime/Drv/ByteStreamDriverModel/ByteStreamDriverModel.fpp
-/home/hiladmin/test/yamcs_system_demo/fprime_demo/src/fprime_app/fprime/Fw/Buffer/Buffer.fpp
-/home/hiladmin/test/yamcs_system_demo/fprime_demo/src/fprime_app/fprime/Fw/Ports/SuccessCondition/SuccessCondition.fpp
-/home/hiladmin/test/yamcs_system_demo/fprime_demo/src/fprime_app/fprime/Fw/Types/Types.fpp

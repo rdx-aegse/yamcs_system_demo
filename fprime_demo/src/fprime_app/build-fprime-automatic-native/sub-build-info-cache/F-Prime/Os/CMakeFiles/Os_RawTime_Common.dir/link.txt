@@ -1,2 +1,0 @@
-/usr/bin/ar qc ../../lib/Linux/libOs_RawTime_Common.a CMakeFiles/Os_RawTime_Common.dir/__/cmake/empty.cpp.o
-/usr/bin/ranlib ../../lib/Linux/libOs_RawTime_Common.a

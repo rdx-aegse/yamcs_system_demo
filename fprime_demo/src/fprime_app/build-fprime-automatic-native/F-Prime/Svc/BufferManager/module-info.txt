@@ -1,5 +1,0 @@
-
-/home/hiladmin/test/yamcs_system_demo/fprime_demo/src/fprime_app/fprime/Svc/BufferManager/BufferManagerComponentImpl.cpp
-/home/hiladmin/test/yamcs_system_demo/fprime_demo/src/fprime_app/build-fprime-automatic-native/F-Prime/Svc/BufferManager/BufferManagerComponentAi.xml;/home/hiladmin/test/yamcs_system_demo/fprime_demo/src/fprime_app/build-fprime-automatic-native/F-Prime/Svc/BufferManager/BufferManagerComponentAc.cpp;/home/hiladmin/test/yamcs_system_demo/fprime_demo/src/fprime_app/build-fprime-automatic-native/F-Prime/Svc/BufferManager/BufferManagerComponentAc.hpp
-/home/hiladmin/test/yamcs_system_demo/fprime_demo/src/fprime_app/fprime/Svc/BufferManager/BufferManager.fpp;/home/hiladmin/test/yamcs_system_demo/fprime_demo/src/fprime_app/fprime/Svc/BufferManager/Events.fppi;/home/hiladmin/test/yamcs_system_demo/fprime_demo/src/fprime_app/fprime/Svc/BufferManager/Telemetry.fppi
-

@@ -1,4 +1,0 @@
-/home/hiladmin/test/yamcs_system_demo/fprime_demo/src/fprime_app/fprime/Fw/Cmd/Cmd.fpp
-/home/hiladmin/test/yamcs_system_demo/fprime_demo/src/fprime_app/fprime/Fw/Com/Com.fpp
-/home/hiladmin/test/yamcs_system_demo/fprime_demo/src/fprime_app/fprime/config/AcConstants.fpp
-/home/hiladmin/test/yamcs_system_demo/fprime_demo/src/fprime_app/fprime/config/FpConfig.fpp

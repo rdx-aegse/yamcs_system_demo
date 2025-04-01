@@ -1,5 +1,0 @@
-
-/home/hiladmin/test/yamcs_system_demo/fprime_demo/src/fprime_app/fprime/Os/Linux/Memory.cpp
-
-
-Os_Memory_Common

@@ -1,2 +1,0 @@
-/usr/bin/ar qc ../../../lib/Linux/libOs_Generic_PriorityQueue.a CMakeFiles/Os_Generic_PriorityQueue.dir/PriorityQueue.cpp.o
-/usr/bin/ranlib ../../../lib/Linux/libOs_Generic_PriorityQueue.a

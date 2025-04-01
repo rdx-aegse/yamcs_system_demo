@@ -1,2 +1,0 @@
-/usr/bin/ar qc ../../lib/Linux/libOs_File_Common.a CMakeFiles/Os_File_Common.dir/File.cpp.o CMakeFiles/Os_File_Common.dir/FileSystem.cpp.o CMakeFiles/Os_File_Common.dir/Directory.cpp.o
-/usr/bin/ranlib ../../lib/Linux/libOs_File_Common.a

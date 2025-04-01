@@ -1,2 +1,0 @@
-/usr/bin/ar qc ../../../lib/Linux/libOs_Mutex_Stub.a CMakeFiles/Os_Mutex_Stub.dir/Mutex.cpp.o CMakeFiles/Os_Mutex_Stub.dir/ConditionVariable.cpp.o
-/usr/bin/ranlib ../../../lib/Linux/libOs_Mutex_Stub.a
