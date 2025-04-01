@@ -11,9 +11,9 @@ TODO: add details
 
 ## Architecture
 
-TODO: add diagram
+![architecture diagram](/docs/architecture.jpg)
 
-The YAMCS mission databases are generated as CSV files. Since YAMCS expects XLS files, in this demonstration the CSVs are compiled into a single XLS by the yamcs_server application. The server application waits for the CSV files to appear in their dedicated folder (in a shared volume between both containers), then proceeds to launching YAMCS. 
+The YAMCS mission databases are generated as CSV files. Since YAMCS expects XLS files, in this demonstration the CSVs are compiled into XLS files by the yamcs_server application. 
 
 ## Getting started
 

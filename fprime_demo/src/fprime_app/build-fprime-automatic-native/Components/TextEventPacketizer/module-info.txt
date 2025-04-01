@@ -1,0 +1,5 @@
+
+/home/hiladmin/test/yamcs_system_demo/fprime_demo/src/fprime_app/Components/TextEventPacketizer/TextEventPacketizer.cpp
+/home/hiladmin/test/yamcs_system_demo/fprime_demo/src/fprime_app/build-fprime-automatic-native/Components/TextEventPacketizer/TextEventPacketizerComponentAi.xml;/home/hiladmin/test/yamcs_system_demo/fprime_demo/src/fprime_app/build-fprime-automatic-native/Components/TextEventPacketizer/TextEventPacketizerComponentAc.cpp;/home/hiladmin/test/yamcs_system_demo/fprime_demo/src/fprime_app/build-fprime-automatic-native/Components/TextEventPacketizer/TextEventPacketizerComponentAc.hpp
+/home/hiladmin/test/yamcs_system_demo/fprime_demo/src/fprime_app/Components/TextEventPacketizer/TextEventPacketizer.fpp
+

@@ -63,7 +63,8 @@ module demo {
     stack size Default.STACK_SIZE \
     priority 100
 
-  instance eventLogger: Svc.ActiveLogger base id 0x0B00 \
+  #Swapped from Svc.ActiveLogger to connect to YAMCS easily
+  instance eventLogger: Svc.TextEventPacketizer base id 0x0B00 \
     queue size Default.QUEUE_SIZE \
     stack size Default.STACK_SIZE \
     priority 98

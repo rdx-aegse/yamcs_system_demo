@@ -1,2 +1,2 @@
-/home/rdx/software/test/yamcs_system_demo/fprime_demo/src/fprime_app/fprime/Svc/ComLogger/Commands.fppi
-/home/rdx/software/test/yamcs_system_demo/fprime_demo/src/fprime_app/fprime/Svc/ComLogger/Events.fppi
+/home/hiladmin/test/yamcs_system_demo/fprime_demo/src/fprime_app/fprime/Svc/ComLogger/Commands.fppi
+/home/hiladmin/test/yamcs_system_demo/fprime_demo/src/fprime_app/fprime/Svc/ComLogger/Events.fppi
