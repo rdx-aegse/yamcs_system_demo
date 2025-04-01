@@ -8,8 +8,8 @@
 #define Svc_TextEventPacketizer_HPP
 
 #include "Components/TextEventPacketizer/TextEventPacketizerComponentAc.hpp"
-#include <Fw/Log/LogPacket.hpp>
-#include <ActiveLoggerImplCfg.hpp>
+#include "Components/TextEventPacketizer/TextEventPacket.hpp"
+#include <ActiveLoggerImplCfg.hpp> //Copied from ActiveLogger but seems like it should be in cpp instead
 
 namespace Svc {
 
@@ -108,11 +108,11 @@ namespace Svc {
 
       // Filter state
       struct t_filterState {
-        ActiveLogger_Enabled enabled; //<! filter is enabled
-      } m_filterState[ActiveLogger_FilterSeverity::NUM_CONSTANTS];
+        TextEventPacketizer_Enabled enabled; //<! filter is enabled
+      } m_filterState[TextEventPacketizer_FilterSeverity::NUM_CONSTANTS];
 
       // Working members
-      Fw::LogPacket m_logPacket; //!< packet buffer for assembling log packets
+      Fw::TextEventPacket m_logPacket; //!< custom packet type for assembling the packet by serialisation
       Fw::ComBuffer m_comBuffer; //!< com buffer for sending event buffers
 
       // array of filtered event IDs.

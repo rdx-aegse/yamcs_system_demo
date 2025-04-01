@@ -125,7 +125,8 @@ namespace Svc {
         U32 key
     )
   {
-    // TODO
+    // return key
+    this->pingOut_out(0,key);
   }
 
   // ----------------------------------------------------------------------
@@ -140,8 +141,8 @@ namespace Svc {
         Svc::TextEventPacketizer_Enabled filterEnabled
     )
   {
-    // TODO
-    this->cmdResponse_out(opCode, cmdSeq, Fw::CmdResponse::OK);
+    this->m_filterState[filterLevel.e].enabled = filterEnabled;
+    this->cmdResponse_out(opCode,cmdSeq,Fw::CmdResponse::OK);
   }
 
   void TextEventPacketizer ::
@@ -152,8 +153,41 @@ namespace Svc {
         Svc::TextEventPacketizer_Enabled idFilterEnabled
     )
   {
-    // TODO
-    this->cmdResponse_out(opCode, cmdSeq, Fw::CmdResponse::OK);
+    if (Enabled::ENABLED == idFilterEnabled.e) { // add ID
+        // search list for existing entry
+        for (NATIVE_INT_TYPE entry = 0; entry < TELEM_ID_FILTER_SIZE; entry++) {
+            if (this->m_filteredIDs[entry] == ID) {
+                this->cmdResponse_out(opCode,cmdSeq,Fw::CmdResponse::OK);
+                this->log_ACTIVITY_HI_ID_FILTER_ENABLED(ID);
+                return;
+            }
+        }
+        // if not already a match, search for an open slot
+        for (NATIVE_INT_TYPE entry = 0; entry < TELEM_ID_FILTER_SIZE; entry++) {
+            if (this->m_filteredIDs[entry] == 0) {
+                this->m_filteredIDs[entry] = ID;
+                this->cmdResponse_out(opCode,cmdSeq,Fw::CmdResponse::OK);
+                this->log_ACTIVITY_HI_ID_FILTER_ENABLED(ID);
+                return;
+            }
+        }
+        // if an empty slot was not found, send an error event
+        this->log_WARNING_LO_ID_FILTER_LIST_FULL(ID);
+        this->cmdResponse_out(opCode,cmdSeq,Fw::CmdResponse::EXECUTION_ERROR);
+    } else { // remove ID
+        // search list for existing entry
+        for (NATIVE_INT_TYPE entry = 0; entry < TELEM_ID_FILTER_SIZE; entry++) {
+            if (this->m_filteredIDs[entry] == ID) {
+                this->m_filteredIDs[entry] = 0; // zero entry
+                this->cmdResponse_out(opCode,cmdSeq,Fw::CmdResponse::OK);
+                this->log_ACTIVITY_HI_ID_FILTER_REMOVED(ID);
+                return;
+            }
+        }
+        // if it gets here, wasn't found
+        this->log_WARNING_LO_ID_FILTER_NOT_FOUND(ID);
+        this->cmdResponse_out(opCode,cmdSeq,Fw::CmdResponse::EXECUTION_ERROR);
+    }
   }
 
   void TextEventPacketizer ::
@@ -162,8 +196,23 @@ namespace Svc {
         U32 cmdSeq
     )
   {
-    // TODO
-    this->cmdResponse_out(opCode, cmdSeq, Fw::CmdResponse::OK);
+    // first, iterate through severity filters
+    for (NATIVE_UINT_TYPE filter = 0; filter < FilterSeverity::NUM_CONSTANTS; filter++) {
+        FilterSeverity filterState(static_cast<FilterSeverity::t>(filter));
+        this->log_ACTIVITY_LO_SEVERITY_FILTER_STATE(
+                filterState,
+                Enabled::ENABLED == this->m_filterState[filter].enabled.e
+        );
+    }
+
+    // iterate through ID filter
+    for (NATIVE_INT_TYPE entry = 0; entry < TELEM_ID_FILTER_SIZE; entry++) {
+        if (this->m_filteredIDs[entry] != 0) {
+            this->log_ACTIVITY_HI_ID_FILTER_ENABLED(this->m_filteredIDs[entry]);
+        }
+    }
+
+    this->cmdResponse_out(opCode,cmdSeq,Fw::CmdResponse::OK);
   }
 
   // ----------------------------------------------------------------------
