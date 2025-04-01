@@ -1,3 +1,3 @@
-/home/hiladmin/test/yamcs_system_demo/fprime_demo/src/fprime_app/fprime/Drv/ByteStreamDriverModel/ByteStreamDriverModel.fpp
-/home/hiladmin/test/yamcs_system_demo/fprime_demo/src/fprime_app/fprime/Fw/Log/Log.fpp
-/home/hiladmin/test/yamcs_system_demo/fprime_demo/src/fprime_app/fprime/Fw/Time/Time.fpp
+/home/rdx/software/test/yamcs_system_demo/fprime_demo/src/fprime_app/fprime/Drv/ByteStreamDriverModel/ByteStreamDriverModel.fpp
+/home/rdx/software/test/yamcs_system_demo/fprime_demo/src/fprime_app/fprime/Fw/Log/Log.fpp
+/home/rdx/software/test/yamcs_system_demo/fprime_demo/src/fprime_app/fprime/Fw/Time/Time.fpp

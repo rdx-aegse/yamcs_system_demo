@@ -1,2 +1,2 @@
-/home/hiladmin/test/yamcs_system_demo/fprime_demo/src/fprime_app/fprime/Svc/BufferManager/Events.fppi
-/home/hiladmin/test/yamcs_system_demo/fprime_demo/src/fprime_app/fprime/Svc/BufferManager/Telemetry.fppi
+/home/rdx/software/test/yamcs_system_demo/fprime_demo/src/fprime_app/fprime/Svc/BufferManager/Events.fppi
+/home/rdx/software/test/yamcs_system_demo/fprime_demo/src/fprime_app/fprime/Svc/BufferManager/Telemetry.fppi

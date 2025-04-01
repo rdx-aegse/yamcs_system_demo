@@ -1,5 +1,5 @@
 
-/home/hiladmin/test/yamcs_system_demo/fprime_demo/src/fprime_app/fprime/Svc/DpManager/DpManager.cpp
-/home/hiladmin/test/yamcs_system_demo/fprime_demo/src/fprime_app/build-fprime-automatic-native/F-Prime/Svc/DpManager/DpManagerComponentAi.xml;/home/hiladmin/test/yamcs_system_demo/fprime_demo/src/fprime_app/build-fprime-automatic-native/F-Prime/Svc/DpManager/DpManagerComponentAc.cpp;/home/hiladmin/test/yamcs_system_demo/fprime_demo/src/fprime_app/build-fprime-automatic-native/F-Prime/Svc/DpManager/DpManagerComponentAc.hpp
-/home/hiladmin/test/yamcs_system_demo/fprime_demo/src/fprime_app/fprime/Svc/DpManager/DpManager.fpp
+/home/rdx/software/test/yamcs_system_demo/fprime_demo/src/fprime_app/fprime/Svc/DpManager/DpManager.cpp
+/home/rdx/software/test/yamcs_system_demo/fprime_demo/src/fprime_app/build-fprime-automatic-native/F-Prime/Svc/DpManager/DpManagerComponentAi.xml;/home/rdx/software/test/yamcs_system_demo/fprime_demo/src/fprime_app/build-fprime-automatic-native/F-Prime/Svc/DpManager/DpManagerComponentAc.cpp;/home/rdx/software/test/yamcs_system_demo/fprime_demo/src/fprime_app/build-fprime-automatic-native/F-Prime/Svc/DpManager/DpManagerComponentAc.hpp
+/home/rdx/software/test/yamcs_system_demo/fprime_demo/src/fprime_app/fprime/Svc/DpManager/DpManager.fpp
 

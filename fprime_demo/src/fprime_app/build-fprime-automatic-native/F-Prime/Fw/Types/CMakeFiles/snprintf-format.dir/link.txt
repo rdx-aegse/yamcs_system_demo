@@ -1,2 +1,2 @@
-/usr/bin/ar qc ../../../lib/Linux/libsnprintf-format.a "CMakeFiles/snprintf-format.dir/__/__/cmake/valid-empty.cpp.o"
+/usr/bin/ar qc ../../../lib/Linux/libsnprintf-format.a CMakeFiles/snprintf-format.dir/__/__/cmake/valid-empty.cpp.o
 /usr/bin/ranlib ../../../lib/Linux/libsnprintf-format.a

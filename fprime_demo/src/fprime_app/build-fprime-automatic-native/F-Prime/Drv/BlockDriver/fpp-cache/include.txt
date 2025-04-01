@@ -1,2 +1,2 @@
-/home/hiladmin/test/yamcs_system_demo/fprime_demo/src/fprime_app/fprime/Drv/BlockDriver/Tlm.fppi
-/home/hiladmin/test/yamcs_system_demo/fprime_demo/src/fprime_app/fprime/Drv/Interfaces/TickInterface.fppi
+/home/rdx/software/test/yamcs_system_demo/fprime_demo/src/fprime_app/fprime/Drv/BlockDriver/Tlm.fppi
+/home/rdx/software/test/yamcs_system_demo/fprime_demo/src/fprime_app/fprime/Drv/Interfaces/TickInterface.fppi

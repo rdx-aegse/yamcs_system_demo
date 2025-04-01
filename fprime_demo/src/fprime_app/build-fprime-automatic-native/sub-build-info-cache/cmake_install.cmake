@@ -1,8 +1,8 @@
-# Install script for directory: /home/hiladmin/test/yamcs_system_demo/fprime_demo/src/fprime_app
+# Install script for directory: /home/rdx/software/test/yamcs_system_demo/fprime_demo/src/fprime_app
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/hiladmin/test/yamcs_system_demo/fprime_demo/src/fprime_app/build-artifacts")
+  set(CMAKE_INSTALL_PREFIX "/home/rdx/software/test/yamcs_system_demo/fprime_demo/src/fprime_app/build-artifacts")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -44,16 +44,16 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/hiladmin/test/yamcs_system_demo/fprime_demo/src/fprime_app/build-fprime-automatic-native/sub-build-info-cache/F-Prime/Autocoders/cmake_install.cmake")
-  include("/home/hiladmin/test/yamcs_system_demo/fprime_demo/src/fprime_app/build-fprime-automatic-native/sub-build-info-cache/config/cmake_install.cmake")
-  include("/home/hiladmin/test/yamcs_system_demo/fprime_demo/src/fprime_app/build-fprime-automatic-native/sub-build-info-cache/F-Prime/Fw/cmake_install.cmake")
-  include("/home/hiladmin/test/yamcs_system_demo/fprime_demo/src/fprime_app/build-fprime-automatic-native/sub-build-info-cache/F-Prime/Svc/cmake_install.cmake")
-  include("/home/hiladmin/test/yamcs_system_demo/fprime_demo/src/fprime_app/build-fprime-automatic-native/sub-build-info-cache/F-Prime/Os/cmake_install.cmake")
-  include("/home/hiladmin/test/yamcs_system_demo/fprime_demo/src/fprime_app/build-fprime-automatic-native/sub-build-info-cache/F-Prime/Drv/cmake_install.cmake")
-  include("/home/hiladmin/test/yamcs_system_demo/fprime_demo/src/fprime_app/build-fprime-automatic-native/sub-build-info-cache/F-Prime/CFDP/cmake_install.cmake")
-  include("/home/hiladmin/test/yamcs_system_demo/fprime_demo/src/fprime_app/build-fprime-automatic-native/sub-build-info-cache/F-Prime/Utils/cmake_install.cmake")
-  include("/home/hiladmin/test/yamcs_system_demo/fprime_demo/src/fprime_app/build-fprime-automatic-native/sub-build-info-cache/Components/cmake_install.cmake")
-  include("/home/hiladmin/test/yamcs_system_demo/fprime_demo/src/fprime_app/build-fprime-automatic-native/sub-build-info-cache/demo/cmake_install.cmake")
+  include("/home/rdx/software/test/yamcs_system_demo/fprime_demo/src/fprime_app/build-fprime-automatic-native/sub-build-info-cache/F-Prime/Autocoders/cmake_install.cmake")
+  include("/home/rdx/software/test/yamcs_system_demo/fprime_demo/src/fprime_app/build-fprime-automatic-native/sub-build-info-cache/config/cmake_install.cmake")
+  include("/home/rdx/software/test/yamcs_system_demo/fprime_demo/src/fprime_app/build-fprime-automatic-native/sub-build-info-cache/F-Prime/Fw/cmake_install.cmake")
+  include("/home/rdx/software/test/yamcs_system_demo/fprime_demo/src/fprime_app/build-fprime-automatic-native/sub-build-info-cache/F-Prime/Svc/cmake_install.cmake")
+  include("/home/rdx/software/test/yamcs_system_demo/fprime_demo/src/fprime_app/build-fprime-automatic-native/sub-build-info-cache/F-Prime/Os/cmake_install.cmake")
+  include("/home/rdx/software/test/yamcs_system_demo/fprime_demo/src/fprime_app/build-fprime-automatic-native/sub-build-info-cache/F-Prime/Drv/cmake_install.cmake")
+  include("/home/rdx/software/test/yamcs_system_demo/fprime_demo/src/fprime_app/build-fprime-automatic-native/sub-build-info-cache/F-Prime/CFDP/cmake_install.cmake")
+  include("/home/rdx/software/test/yamcs_system_demo/fprime_demo/src/fprime_app/build-fprime-automatic-native/sub-build-info-cache/F-Prime/Utils/cmake_install.cmake")
+  include("/home/rdx/software/test/yamcs_system_demo/fprime_demo/src/fprime_app/build-fprime-automatic-native/sub-build-info-cache/Components/cmake_install.cmake")
+  include("/home/rdx/software/test/yamcs_system_demo/fprime_demo/src/fprime_app/build-fprime-automatic-native/sub-build-info-cache/demo/cmake_install.cmake")
 
 endif()
 
@@ -65,5 +65,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/hiladmin/test/yamcs_system_demo/fprime_demo/src/fprime_app/build-fprime-automatic-native/sub-build-info-cache/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/rdx/software/test/yamcs_system_demo/fprime_demo/src/fprime_app/build-fprime-automatic-native/sub-build-info-cache/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
