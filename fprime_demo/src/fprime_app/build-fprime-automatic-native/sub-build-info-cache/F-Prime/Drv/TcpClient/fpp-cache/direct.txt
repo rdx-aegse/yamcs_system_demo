@@ -1,2 +1,2 @@
-/home/rdx/software/test/yamcs_system_demo/fprime_demo/src/fprime_app/fprime/Drv/ByteStreamDriverModel/ByteStreamDriverModel.fpp
-/home/rdx/software/test/yamcs_system_demo/fprime_demo/src/fprime_app/fprime/Drv/Interfaces/ByteStreamDriverInterface.fppi
+/home/hiladmin/test/yamcs_system_demo/fprime_demo/src/fprime_app/fprime/Drv/ByteStreamDriverModel/ByteStreamDriverModel.fpp
+/home/hiladmin/test/yamcs_system_demo/fprime_demo/src/fprime_app/fprime/Drv/Interfaces/ByteStreamDriverInterface.fppi

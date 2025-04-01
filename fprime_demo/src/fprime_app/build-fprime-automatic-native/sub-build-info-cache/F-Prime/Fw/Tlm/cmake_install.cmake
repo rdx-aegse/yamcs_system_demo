@@ -1,8 +1,8 @@
-# Install script for directory: /home/rdx/software/test/yamcs_system_demo/fprime_demo/src/fprime_app/fprime/Fw/Tlm
+# Install script for directory: /home/hiladmin/test/yamcs_system_demo/fprime_demo/src/fprime_app/fprime/Fw/Tlm
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/rdx/software/test/yamcs_system_demo/fprime_demo/src/fprime_app/build-artifacts")
+  set(CMAKE_INSTALL_PREFIX "/home/hiladmin/test/yamcs_system_demo/fprime_demo/src/fprime_app/build-artifacts")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 

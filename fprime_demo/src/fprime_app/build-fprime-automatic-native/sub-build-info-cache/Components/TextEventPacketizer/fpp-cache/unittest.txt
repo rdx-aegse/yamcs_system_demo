@@ -1,0 +1,5 @@
+TextEventPacketizerGTestBase.cpp
+TextEventPacketizerGTestBase.hpp
+TextEventPacketizerTesterBase.cpp
+TextEventPacketizerTesterBase.hpp
+TextEventPacketizerTesterHelpers.cpp

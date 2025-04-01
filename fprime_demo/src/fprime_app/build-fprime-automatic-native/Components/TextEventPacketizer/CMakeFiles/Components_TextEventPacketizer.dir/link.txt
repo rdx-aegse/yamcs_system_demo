@@ -1,0 +1,2 @@
+/usr/bin/ar qc ../../lib/Linux/libComponents_TextEventPacketizer.a CMakeFiles/Components_TextEventPacketizer.dir/TextEventPacketizer.cpp.o CMakeFiles/Components_TextEventPacketizer.dir/TextEventPacketizerComponentAc.cpp.o
+/usr/bin/ranlib ../../lib/Linux/libComponents_TextEventPacketizer.a

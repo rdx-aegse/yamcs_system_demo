@@ -1,8 +1,8 @@
-# Install script for directory: /home/rdx/software/test/yamcs_system_demo/fprime_demo/src/fprime_app/fprime/Os
+# Install script for directory: /home/hiladmin/test/yamcs_system_demo/fprime_demo/src/fprime_app/fprime/Os
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/rdx/software/test/yamcs_system_demo/fprime_demo/src/fprime_app/build-artifacts")
+  set(CMAKE_INSTALL_PREFIX "/home/hiladmin/test/yamcs_system_demo/fprime_demo/src/fprime_app/build-artifacts")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -44,12 +44,12 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/rdx/software/test/yamcs_system_demo/fprime_demo/src/fprime_app/build-fprime-automatic-native/F-Prime/Os/Models/cmake_install.cmake")
-  include("/home/rdx/software/test/yamcs_system_demo/fprime_demo/src/fprime_app/build-fprime-automatic-native/F-Prime/Os/Stub/cmake_install.cmake")
-  include("/home/rdx/software/test/yamcs_system_demo/fprime_demo/src/fprime_app/build-fprime-automatic-native/F-Prime/Os/Posix/cmake_install.cmake")
-  include("/home/rdx/software/test/yamcs_system_demo/fprime_demo/src/fprime_app/build-fprime-automatic-native/F-Prime/Os/Generic/cmake_install.cmake")
-  include("/home/rdx/software/test/yamcs_system_demo/fprime_demo/src/fprime_app/build-fprime-automatic-native/F-Prime/Os/Linux/cmake_install.cmake")
-  include("/home/rdx/software/test/yamcs_system_demo/fprime_demo/src/fprime_app/build-fprime-automatic-native/F-Prime/Os/Darwin/cmake_install.cmake")
+  include("/home/hiladmin/test/yamcs_system_demo/fprime_demo/src/fprime_app/build-fprime-automatic-native/F-Prime/Os/Models/cmake_install.cmake")
+  include("/home/hiladmin/test/yamcs_system_demo/fprime_demo/src/fprime_app/build-fprime-automatic-native/F-Prime/Os/Stub/cmake_install.cmake")
+  include("/home/hiladmin/test/yamcs_system_demo/fprime_demo/src/fprime_app/build-fprime-automatic-native/F-Prime/Os/Posix/cmake_install.cmake")
+  include("/home/hiladmin/test/yamcs_system_demo/fprime_demo/src/fprime_app/build-fprime-automatic-native/F-Prime/Os/Generic/cmake_install.cmake")
+  include("/home/hiladmin/test/yamcs_system_demo/fprime_demo/src/fprime_app/build-fprime-automatic-native/F-Prime/Os/Linux/cmake_install.cmake")
+  include("/home/hiladmin/test/yamcs_system_demo/fprime_demo/src/fprime_app/build-fprime-automatic-native/F-Prime/Os/Darwin/cmake_install.cmake")
 
 endif()
 

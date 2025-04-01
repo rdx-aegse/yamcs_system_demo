@@ -50,13 +50,14 @@ module demo {
 
     command connections instance cmdDisp
 
-    event connections instance eventLogger
+    #removed log connections instance eventLogger, since eventLogger is now a TextEventPacketizer
 
     param connections instance prmDb
 
     telemetry connections instance tlmSend
 
-    text event connections instance textLogger
+    #Swapped textLogger with eventLogger; TODO: insert a splitter to also connect to textLogger
+    text event connections instance eventLogger
 
     time connections instance chronoTime
 

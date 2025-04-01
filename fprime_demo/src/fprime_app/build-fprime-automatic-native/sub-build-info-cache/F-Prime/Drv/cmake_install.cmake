@@ -1,8 +1,8 @@
-# Install script for directory: /home/rdx/software/test/yamcs_system_demo/fprime_demo/src/fprime_app/fprime/Drv
+# Install script for directory: /home/hiladmin/test/yamcs_system_demo/fprime_demo/src/fprime_app/fprime/Drv
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/rdx/software/test/yamcs_system_demo/fprime_demo/src/fprime_app/build-artifacts")
+  set(CMAKE_INSTALL_PREFIX "/home/hiladmin/test/yamcs_system_demo/fprime_demo/src/fprime_app/build-artifacts")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -44,18 +44,18 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/rdx/software/test/yamcs_system_demo/fprime_demo/src/fprime_app/build-fprime-automatic-native/sub-build-info-cache/F-Prime/Drv/Ports/cmake_install.cmake")
-  include("/home/rdx/software/test/yamcs_system_demo/fprime_demo/src/fprime_app/build-fprime-automatic-native/sub-build-info-cache/F-Prime/Drv/BlockDriver/cmake_install.cmake")
-  include("/home/rdx/software/test/yamcs_system_demo/fprime_demo/src/fprime_app/build-fprime-automatic-native/sub-build-info-cache/F-Prime/Drv/ByteStreamDriverModel/cmake_install.cmake")
-  include("/home/rdx/software/test/yamcs_system_demo/fprime_demo/src/fprime_app/build-fprime-automatic-native/sub-build-info-cache/F-Prime/Drv/LinuxGpioDriver/cmake_install.cmake")
-  include("/home/rdx/software/test/yamcs_system_demo/fprime_demo/src/fprime_app/build-fprime-automatic-native/sub-build-info-cache/F-Prime/Drv/LinuxUartDriver/cmake_install.cmake")
-  include("/home/rdx/software/test/yamcs_system_demo/fprime_demo/src/fprime_app/build-fprime-automatic-native/sub-build-info-cache/F-Prime/Drv/LinuxSpiDriver/cmake_install.cmake")
-  include("/home/rdx/software/test/yamcs_system_demo/fprime_demo/src/fprime_app/build-fprime-automatic-native/sub-build-info-cache/F-Prime/Drv/LinuxI2cDriver/cmake_install.cmake")
-  include("/home/rdx/software/test/yamcs_system_demo/fprime_demo/src/fprime_app/build-fprime-automatic-native/sub-build-info-cache/F-Prime/Drv/StreamCrossover/cmake_install.cmake")
-  include("/home/rdx/software/test/yamcs_system_demo/fprime_demo/src/fprime_app/build-fprime-automatic-native/sub-build-info-cache/F-Prime/Drv/Ip/cmake_install.cmake")
-  include("/home/rdx/software/test/yamcs_system_demo/fprime_demo/src/fprime_app/build-fprime-automatic-native/sub-build-info-cache/F-Prime/Drv/TcpClient/cmake_install.cmake")
-  include("/home/rdx/software/test/yamcs_system_demo/fprime_demo/src/fprime_app/build-fprime-automatic-native/sub-build-info-cache/F-Prime/Drv/TcpServer/cmake_install.cmake")
-  include("/home/rdx/software/test/yamcs_system_demo/fprime_demo/src/fprime_app/build-fprime-automatic-native/sub-build-info-cache/F-Prime/Drv/Udp/cmake_install.cmake")
+  include("/home/hiladmin/test/yamcs_system_demo/fprime_demo/src/fprime_app/build-fprime-automatic-native/sub-build-info-cache/F-Prime/Drv/Ports/cmake_install.cmake")
+  include("/home/hiladmin/test/yamcs_system_demo/fprime_demo/src/fprime_app/build-fprime-automatic-native/sub-build-info-cache/F-Prime/Drv/BlockDriver/cmake_install.cmake")
+  include("/home/hiladmin/test/yamcs_system_demo/fprime_demo/src/fprime_app/build-fprime-automatic-native/sub-build-info-cache/F-Prime/Drv/ByteStreamDriverModel/cmake_install.cmake")
+  include("/home/hiladmin/test/yamcs_system_demo/fprime_demo/src/fprime_app/build-fprime-automatic-native/sub-build-info-cache/F-Prime/Drv/LinuxGpioDriver/cmake_install.cmake")
+  include("/home/hiladmin/test/yamcs_system_demo/fprime_demo/src/fprime_app/build-fprime-automatic-native/sub-build-info-cache/F-Prime/Drv/LinuxUartDriver/cmake_install.cmake")
+  include("/home/hiladmin/test/yamcs_system_demo/fprime_demo/src/fprime_app/build-fprime-automatic-native/sub-build-info-cache/F-Prime/Drv/LinuxSpiDriver/cmake_install.cmake")
+  include("/home/hiladmin/test/yamcs_system_demo/fprime_demo/src/fprime_app/build-fprime-automatic-native/sub-build-info-cache/F-Prime/Drv/LinuxI2cDriver/cmake_install.cmake")
+  include("/home/hiladmin/test/yamcs_system_demo/fprime_demo/src/fprime_app/build-fprime-automatic-native/sub-build-info-cache/F-Prime/Drv/StreamCrossover/cmake_install.cmake")
+  include("/home/hiladmin/test/yamcs_system_demo/fprime_demo/src/fprime_app/build-fprime-automatic-native/sub-build-info-cache/F-Prime/Drv/Ip/cmake_install.cmake")
+  include("/home/hiladmin/test/yamcs_system_demo/fprime_demo/src/fprime_app/build-fprime-automatic-native/sub-build-info-cache/F-Prime/Drv/TcpClient/cmake_install.cmake")
+  include("/home/hiladmin/test/yamcs_system_demo/fprime_demo/src/fprime_app/build-fprime-automatic-native/sub-build-info-cache/F-Prime/Drv/TcpServer/cmake_install.cmake")
+  include("/home/hiladmin/test/yamcs_system_demo/fprime_demo/src/fprime_app/build-fprime-automatic-native/sub-build-info-cache/F-Prime/Drv/Udp/cmake_install.cmake")
 
 endif()
 

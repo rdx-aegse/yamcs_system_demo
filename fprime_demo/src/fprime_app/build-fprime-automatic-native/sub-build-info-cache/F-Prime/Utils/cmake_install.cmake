@@ -1,8 +1,8 @@
-# Install script for directory: /home/rdx/software/test/yamcs_system_demo/fprime_demo/src/fprime_app/fprime/Utils
+# Install script for directory: /home/hiladmin/test/yamcs_system_demo/fprime_demo/src/fprime_app/fprime/Utils
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/rdx/software/test/yamcs_system_demo/fprime_demo/src/fprime_app/build-artifacts")
+  set(CMAKE_INSTALL_PREFIX "/home/hiladmin/test/yamcs_system_demo/fprime_demo/src/fprime_app/build-artifacts")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -44,8 +44,8 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/rdx/software/test/yamcs_system_demo/fprime_demo/src/fprime_app/build-fprime-automatic-native/sub-build-info-cache/F-Prime/Utils/Hash/cmake_install.cmake")
-  include("/home/rdx/software/test/yamcs_system_demo/fprime_demo/src/fprime_app/build-fprime-automatic-native/sub-build-info-cache/F-Prime/Utils/Types/cmake_install.cmake")
+  include("/home/hiladmin/test/yamcs_system_demo/fprime_demo/src/fprime_app/build-fprime-automatic-native/sub-build-info-cache/F-Prime/Utils/Hash/cmake_install.cmake")
+  include("/home/hiladmin/test/yamcs_system_demo/fprime_demo/src/fprime_app/build-fprime-automatic-native/sub-build-info-cache/F-Prime/Utils/Types/cmake_install.cmake")
 
 endif()
 
