@@ -1,13 +1,8 @@
 <packets name="demoPackets" namespace="demo" size="111">
+
     <import_topology>demo/Top/demoTopologyAppAi.xml</import_topology>
 
-    <packet name="DriveTlm" id="1" level="1">
-        <channel name="demo.tlmSend.SendLevel"/>
-        <channel name="demo.blockDrv.BD_Cycles"/>
-    </packet>
-
-    <ignore>
-        <channel name="demo.cmdDisp.CommandErrors"/>
+    <packet name="CDH" id="1" level="1">
         <channel name="demo.cmdDisp.CommandsDispatched"/>
         <channel name="demo.rateGroup1.RgMaxTime"/>
         <channel name="demo.rateGroup2.RgMaxTime"/>
@@ -24,6 +19,11 @@
         <channel name="demo.fileDownlink.FilesSent"/>
         <channel name="demo.fileDownlink.PacketsSent"/>
         <channel name="demo.fileManager.CommandsExecuted"/>
+        <!-- Uncomment to use Svc::TlmPacketizer -->
+        <channel name="demo.tlmSend.SendLevel"/>
+    </packet>
+
+    <packet name="CDHErrors" id="2" level="1">
         <channel name="demo.rateGroup1.RgCycleSlips"/>
         <channel name="demo.rateGroup2.RgCycleSlips"/>
         <channel name="demo.rateGroup3.RgCycleSlips"/>
@@ -34,12 +34,25 @@
         <channel name="demo.fileManager.Errors"/>
         <channel name="demo.bufferManager.NoBuffs"/>
         <channel name="demo.bufferManager.EmptyBuffs"/>
+    </packet>
+
+    <packet name="DriveTlm" id="3" level="1">
+        <channel name="demo.blockDrv.BD_Cycles"/>
+    </packet>
+
+    <packet name="Comms" id="4" level="1">
         <channel name="demo.comQueue.comQueueDepth"/>
         <channel name="demo.comQueue.buffQueueDepth"/>
+    </packet>
+
+    <packet name="SystemRes1" id="5" level="2">
         <channel name="demo.systemResources.MEMORY_TOTAL"/>
         <channel name="demo.systemResources.MEMORY_USED"/>
         <channel name="demo.systemResources.NON_VOLATILE_TOTAL"/>
         <channel name="demo.systemResources.NON_VOLATILE_FREE"/>
+    </packet>
+
+    <packet name="SystemRes2" id="7" level="2">
         <channel name="demo.systemResources.CPU"/>
         <channel name="demo.systemResources.CPU_00"/>
         <channel name="demo.systemResources.CPU_01"/>
@@ -57,5 +70,11 @@
         <channel name="demo.systemResources.CPU_13"/>
         <channel name="demo.systemResources.CPU_14"/>
         <channel name="demo.systemResources.CPU_15"/>
+    </packet>
+
+    <!-- Ignored packets -->
+
+    <ignore>
+        <channel name="demo.cmdDisp.CommandErrors"/>
     </ignore>
 </packets>
