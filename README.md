@@ -13,6 +13,8 @@ TODO: add details
 
 ![architecture diagram](/docs/architecture.jpg)
 
+More details available on the [data flow for TM, TC and events at the packet level](/docs/architecture-tmtcevents.jpg).
+
 The YAMCS mission databases are generated as CSV files. Since YAMCS expects XLS files, in this demonstration the CSVs are compiled into XLS files by the yamcs_server application. 
 
 ## Getting started
