@@ -77,7 +77,7 @@ public class FprimePacketPreprocessor extends AbstractPacketPreprocessor {
         byte[] packet = tmPacket.getPacket();
 
         //Debug
-        //log.warn("Received packet of size {}: {}", packet.length, packet);
+        log.warn("Received packet of size {}: {}", packet.length, packet);
         
         //If the packet cannot be complete even for packets with no payload, do not trigger preprocessing - keep accumulating
         if (packet.length < MIN_PACKET_LENGTH) {
@@ -99,17 +99,20 @@ public class FprimePacketPreprocessor extends AbstractPacketPreprocessor {
             return null; 
         }
 
-        int packetSize = bb.getInt(); //"packet size" as declared by the packet itself, part of the header (see Fprime protocol)
+        //"packet size" as declared by the packet itself, part of the header (see Svc/Framer/FprimeProtocol)
+        //For reminder it includes everything but itself, the start word or the CRC
+        int packetSize = bb.getInt(); 
         int packetTypeId = bb.getInt();
         short packetId = bb.getShort();
-        // Skip 11 bytes of time tag
+        // Skip time tag
         bb.position(bb.position() + TIME_TAG_LENGTH);
-        // Extract actual packet data
-        byte[] tmData = new byte[packetSize-PAYLOAD_HEADER_LENGTH-CRC_LENGTH];
+        
+        // Extract TM data which amounts to the declared packet size minus what has already been extracted
+        byte[] tmData = new byte[packetSize-PACKET_TYPE_LENGTH-PACKET_ID_LENGTH-TIME_TAG_LENGTH]; 
         bb.get(tmData);
 
         //Debug
-        //log.warn("Packet type: {}, ID: {}, payload: {}", packet.length, packetTypeId, packetId, tmData);
+        log.warn("Packet type: {}, ID: {}, {} bytes of payload: {}", packet.length, packetTypeId, packetId, tmData.length, tmData);
 
         // TODO: check checksum after bb.getInt()
 

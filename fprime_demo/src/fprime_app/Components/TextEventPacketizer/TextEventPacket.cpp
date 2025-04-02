@@ -43,7 +43,7 @@ namespace Fw {
         }
 
         //Serialise the text message without its length (copied but second argument should really be Fw::Serialization::OMIT_LENGTH)
-        return buffer.serialize(this->m_text,m_logBuffer.getCapacity(),true);
+        return buffer.serialize(this->m_text);
     }
 
     SerializeStatus TextEventPacket::deserialize(SerializeBufferBase& buffer) {
@@ -72,10 +72,9 @@ namespace Fw {
         }
 
         // remainder of buffer must be textual event
-        NATIVE_UINT_TYPE size = buffer.getBuffLeft();
-        stat = buffer.deserialize(this->m_text.getCapacity(),size,true);
+        stat = buffer.deserialize(this->m_text);
         if (stat == FW_SERIALIZE_OK) {
-            // Shouldn't fail
+            // TODO: Comes from ActiveLogger, not sure why it'd be necessary?
             FW_ASSERT(stat == FW_SERIALIZE_OK,static_cast<NATIVE_INT_TYPE>(stat));
         }
         return stat;
@@ -93,7 +92,7 @@ namespace Fw {
         this->m_timeTag = timeTag;
     }
 
-    void TextEventpacket::setSeverity(const Fw::LogSeverity& severity) {
+    void TextEventPacket::setSeverity(const Fw::LogSeverity& severity) {
         this->m_severity = severity;
     }
 
@@ -105,11 +104,11 @@ namespace Fw {
         return this->m_timeTag;
     }
 
-    TextLogString& getText() {
+    TextLogString& TextEventPacket::getText() {
         return this->m_text;
     }
 
-    Fw::LogSeverity& getSeverity() {
+    Fw::LogSeverity& TextEventPacket::getSeverity() {
         return this->m_severity;
     }
 } /* namespace Fw */

@@ -117,7 +117,7 @@ public class SimplestEventDecodingService extends AbstractYamcsService implement
         int packet_id = buffer.getShort();
         int severity = buffer.getInt();
         String source = "";
-        if(nBytesSource) {
+        if(nBytesSource > 0) {
             source = readString(buffer, nBytesSource);
         }
         String message = readString(buffer, nBytesMsg);

@@ -9,10 +9,10 @@
 # https://fprime.jpl.nasa.gov/latest/documentation/reference
 #
 ####
-
 set(SOURCE_FILES
   "${CMAKE_CURRENT_LIST_DIR}/TextEventPacketizer.fpp"
   "${CMAKE_CURRENT_LIST_DIR}/TextEventPacketizer.cpp"
+  "${CMAKE_CURRENT_LIST_DIR}/TextEventPacket.cpp"
 )
 
 # Uncomment and add any modules that this component depends on, else
@@ -26,6 +26,10 @@ set(SOURCE_FILES
 # set(MOD_DEPS
 #   MyPackage_MyOtherModule
 # )
+set(MOD_DEPS
+    Fw/Com
+    Fw/Log
+)
 
 register_fprime_module()
 
@@ -35,8 +39,10 @@ register_fprime_module()
 #   "${CMAKE_CURRENT_LIST_DIR}/TextEventPacketizer.fpp"
 #   "${CMAKE_CURRENT_LIST_DIR}/test/ut/TextEventPacketizerTestMain.cpp"
 #   "${CMAKE_CURRENT_LIST_DIR}/test/ut/TextEventPacketizerTester.cpp"
+#   "${CMAKE_CURRENT_LIST_DIR}/test/ut/TextEventPacket.cpp"
 # )
 # set(UT_MOD_DEPS
+#   Fw/Com
 #   STest
 # )
 # set(UT_AUTO_HELPERS ON)

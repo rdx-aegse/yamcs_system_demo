@@ -11,6 +11,7 @@
 #include <Fw/Com/ComPacket.hpp>
 #include <Fw/Log/TextLogString.hpp>
 #include <Fw/Time/Time.hpp>
+#include <Fw/Log/LogSeverityEnumAc.hpp>
 
 namespace Fw {
 
