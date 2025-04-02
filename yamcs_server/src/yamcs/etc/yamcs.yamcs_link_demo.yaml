@@ -27,7 +27,6 @@ services:
     args:
       stream: tm_stream
       nBytesSource: 80
-      nBytesMsg: 256
 
 dataLinks:
   - name: tcp-out

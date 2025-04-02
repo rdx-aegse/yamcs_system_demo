@@ -24,7 +24,7 @@ namespace Fw {
             return stat;
         }
 
-        //Serialise the packet ID
+        //Serialise the event ID
         stat = buffer.serialize(this->m_id);
         if (stat != FW_SERIALIZE_OK) {
             return stat;
@@ -42,8 +42,12 @@ namespace Fw {
             return stat;
         }
 
-        //Serialise the text message without its length (copied but second argument should really be Fw::Serialization::OMIT_LENGTH)
-        return buffer.serialize(this->m_text,m_logBuffer.getCapacity(),true);
+        //Serialise the text message without its length. 
+        return buffer.serialize(
+            reinterpret_cast<const U8*>(this->m_text.toChar()), 
+            static_cast<NATIVE_UINT_TYPE>(this->m_text.getCapacity()),
+            true
+        );
     }
 
     SerializeStatus TextEventPacket::deserialize(SerializeBufferBase& buffer) {
@@ -71,13 +75,14 @@ namespace Fw {
             return stat;
         }
 
-        // remainder of buffer must be textual event
-        NATIVE_UINT_TYPE size = buffer.getBuffLeft();
-        stat = buffer.deserialize(this->m_text.getCapacity(),size,true);
-        if (stat == FW_SERIALIZE_OK) {
-            // Shouldn't fail
-            FW_ASSERT(stat == FW_SERIALIZE_OK,static_cast<NATIVE_INT_TYPE>(stat));
-        }
+        //Deserialize textual event (not serialised with its length).
+        this->m_text = "";
+        NATIVE_UINT_TYPE text_capacity = this->m_text.getCapacity();
+        stat = buffer.deserialize(
+            reinterpret_cast<U8*>(const_cast<char*>(this->m_text.toChar())), 
+            text_capacity, 
+            true
+        );
         return stat;
     }
 
@@ -93,7 +98,7 @@ namespace Fw {
         this->m_timeTag = timeTag;
     }
 
-    void TextEventpacket::setSeverity(const Fw::LogSeverity& severity) {
+    void TextEventPacket::setSeverity(const Fw::LogSeverity& severity) {
         this->m_severity = severity;
     }
 
@@ -105,11 +110,11 @@ namespace Fw {
         return this->m_timeTag;
     }
 
-    TextLogString& getText() {
+    TextLogString& TextEventPacket::getText() {
         return this->m_text;
     }
 
-    Fw::LogSeverity& getSeverity() {
+    Fw::LogSeverity& TextEventPacket::getSeverity() {
         return this->m_severity;
     }
 } /* namespace Fw */

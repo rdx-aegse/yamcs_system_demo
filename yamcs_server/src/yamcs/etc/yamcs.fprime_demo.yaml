@@ -27,7 +27,7 @@ services:
     args:
       stream: tm_stream
       nBytesSource: 0 #Does not send any source component str
-      nBytesMsg: 256
+      mapSeverity: [0, 7, 3, 1, 0, 0, 0, 0]
 
 dataLinks:
   - name: tcp-out
