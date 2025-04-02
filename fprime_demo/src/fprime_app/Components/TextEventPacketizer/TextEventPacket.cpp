@@ -42,8 +42,12 @@ namespace Fw {
             return stat;
         }
 
-        //Serialise the text message without its length (copied but second argument should really be Fw::Serialization::OMIT_LENGTH)
-        return buffer.serialize(this->m_text);
+        //Serialise the text message without its length. 
+        return buffer.serialize(
+            reinterpret_cast<const U8*>(this->m_text.toChar()), 
+            static_cast<NATIVE_UINT_TYPE>(this->m_text.getCapacity()),
+            true
+        );
     }
 
     SerializeStatus TextEventPacket::deserialize(SerializeBufferBase& buffer) {
@@ -71,12 +75,14 @@ namespace Fw {
             return stat;
         }
 
-        // remainder of buffer must be textual event
-        stat = buffer.deserialize(this->m_text);
-        if (stat == FW_SERIALIZE_OK) {
-            // TODO: Comes from ActiveLogger, not sure why it'd be necessary?
-            FW_ASSERT(stat == FW_SERIALIZE_OK,static_cast<NATIVE_INT_TYPE>(stat));
-        }
+        //Deserialize textual event (not serialised with its length).
+        this->m_text = "";
+        NATIVE_UINT_TYPE text_capacity = this->m_text.getCapacity();
+        stat = buffer.deserialize(
+            reinterpret_cast<U8*>(const_cast<char*>(this->m_text.toChar())), 
+            text_capacity, 
+            true
+        );
         return stat;
     }
 
