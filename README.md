@@ -22,8 +22,7 @@ The YAMCS mission databases are generated as CSV files. Since YAMCS expects XLS 
 ```bash
 git clone https://github.com/rdx-aegse/yamcs_system_demo
 cd yamcs_system_demo
-git submodule init 
-git submodule update --recursive --progress
+git submodule update --init --recursive --progress
 chmod +x ./run.sh
 ./run.sh
 ```
@@ -31,7 +30,7 @@ chmod +x ./run.sh
 Later, at any point, to update the submodules, run the following at the root of yamcs_system_demo:
 ```bash
 git pull
-git submodule update --init --recursive
+git submodule update --init --recursive --progress
 ```
 ## Navigating the repository
 
