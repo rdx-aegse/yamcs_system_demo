@@ -24,7 +24,7 @@ namespace Fw {
             return stat;
         }
 
-        //Serialise the packet ID
+        //Serialise the event ID
         stat = buffer.serialize(this->m_id);
         if (stat != FW_SERIALIZE_OK) {
             return stat;

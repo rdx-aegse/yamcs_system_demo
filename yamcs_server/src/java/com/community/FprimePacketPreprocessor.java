@@ -77,7 +77,7 @@ public class FprimePacketPreprocessor extends AbstractPacketPreprocessor {
         byte[] packet = tmPacket.getPacket();
 
         //Debug
-        log.warn("Received packet of size {}: {}", packet.length, packet);
+        //log.warn("Received packet of size {}: {}", packet.length, packet);
         
         //If the packet cannot be complete even for packets with no payload, do not trigger preprocessing - keep accumulating
         if (packet.length < MIN_PACKET_LENGTH) {
@@ -112,7 +112,7 @@ public class FprimePacketPreprocessor extends AbstractPacketPreprocessor {
         bb.get(tmData);
 
         //Debug
-        log.warn("Packet type: {}, ID: {}, {} bytes of payload: {}", packet.length, packetTypeId, packetId, tmData.length, tmData);
+        //log.warn("Packet type: {} with declared size {}, ID: {}, {} bytes of payload: {}",  packetTypeId, packetSize, packetId, tmData.length, tmData);
 
         // TODO: check checksum after bb.getInt()
 
