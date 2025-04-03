@@ -39,7 +39,7 @@ public class FprimePacketPreprocessor extends AbstractPacketPreprocessor {
     //Number of bytes for the packet type field. Comes from fprime's FwPacketDescriptorType in config/FpConfig.h. 
     private static final int PACKET_TYPE_LENGTH = 4; //Warning: Only change in concert with the getInt(), getShort(), putInt() putShort() methods here as well as the YAMCS mission database's constants!
     //Number of bytes for the packet ID field. Comes from fprime's FwTlmPacketizeIdType in config/FpConfig.h
-    private static final int PACKET_ID_LENGTH = 2;  //Warning: Only change in concert with the getInt(), getShort(), putInt() putShort() methods here as well as the YAMCS mission database's constants!
+    private static final int PACKET_ID_LENGTH = 4;  //Warning: Only change in concert with the getInt(), getShort(), putInt() putShort() methods here as well as the YAMCS mission database's constants!
     //Length in bytes of the packet size field in the packet header. 
     private static final int PACKET_SIZE_LENGTH = 4; //Warning: Only change in concert with the getInt() and getShort() methods here!
     //Number of bytes for the time tag field. 
@@ -103,7 +103,7 @@ public class FprimePacketPreprocessor extends AbstractPacketPreprocessor {
         //For reminder it includes everything but itself, the start word or the CRC
         int packetSize = bb.getInt(); 
         int packetTypeId = bb.getInt();
-        short packetId = bb.getShort();
+        int packetId = bb.getInt();
         // Skip time tag
         bb.position(bb.position() + TIME_TAG_LENGTH);
         
@@ -119,7 +119,7 @@ public class FprimePacketPreprocessor extends AbstractPacketPreprocessor {
         // Create new TmPacket with extracted data
         ByteBuffer newBuffer = ByteBuffer.allocate(PACKET_TYPE_LENGTH + PACKET_ID_LENGTH + tmData.length);
         newBuffer.putInt(packetTypeId);
-        newBuffer.putShort(packetId);
+        newBuffer.putInt(packetId);
         newBuffer.put(tmData);
         newBuffer.flip(); //Flip double buffer
         TmPacket newPacket = new TmPacket(TimeEncoding.getWallclockTime(), newBuffer.array()); //Receptiontime
