@@ -36,8 +36,8 @@ Note: there is a cooldown period for socket re-use of approximately one minute. 
 
 The demo spins up two YAMCS instances, accessible from the top left corner of the web client:
 - In fprime_demo
-  - In Telemetry/Parameters, demo/, most TM is visible especially the counter BD_Cycle
-  - To see more TM, go in Commanding/Send a command, and send sendTlm/SET_LEVEL with argument 2.
+  - In Telemetry/Parameters, demo/, some TM is received especially the counter BD_Cycle
+  - To receive more TM, go in Commanding/Send a command, and send sendTlm/SET_LEVEL with argument 2.
   - Go in Events, you should see an event for emitting the command and another for successful execution
   - Go back in Telemetry/Parameters, demo/, you should see all TM but warnings, queue depths and errors, including memory and CPU usage;
 - In yamcs_link_demo: same things to experiment, except that there is only one command made available with dummy arguments, and only one event which will be emitted when the command is received. 
