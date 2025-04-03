@@ -1,3 +1,11 @@
-[submodule "yamcs_link_demo/src/yamcs_link"]
+[submodule "fprime2yamcs"]
+	path = fprime_demo/src/fprime2yamcs
+	url = https://github.com/rdx-aegse/fprime2yamcs
+	branch = main
+[submodule "yamcs_link"]
 	path = yamcs_link_demo/src/yamcs_link
-	url = git@github.com:rdx-aegse/yamcs_link.git
+	url = https://github.com/rdx-aegse/yamcs_link
+	branch = main
+[submodule "fprime_demo/src/fprime_app/fprime"]
+	path = fprime_demo/src/fprime_app/fprime
+	url = https://github.com/rdx-aegse/fprime.git

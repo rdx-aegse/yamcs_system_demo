@@ -11,26 +11,29 @@ TODO: add details
 
 ## Architecture
 
-TODO: add diagram
+![architecture diagram](/docs/architecture.jpg)
 
-The YAMCS mission databases are generated as CSV files. Since YAMCS expects XLS files, in this demonstration the CSVs are compiled into a single XLS by the yamcs_server application. The server application waits for the CSV files to appear in their dedicated folder (in a shared volume between both containers), then proceeds to launching YAMCS. 
+More details available on the [data flow for TM, TC and events at the packet level](/docs/architecture-tm,tc,events.jpg).
+
+The YAMCS mission databases are generated as CSV files. Since YAMCS expects XLS files, in this demonstration the CSVs are compiled into XLS files by the yamcs_server application. 
 
 ## Getting started
 
 ```bash
-git clone --recurse-submodules https://github.com/rdx-aegse/yamcs_system_demo
+git clone https://github.com/rdx-aegse/yamcs_system_demo
 cd yamcs_system_demo
+git submodule update --init --recursive --progress
 chmod +x ./run.sh
 ./run.sh
 ```
 
-The log window will eventually say YAMCS's web client will be accessible at localhost:8090 in any web browser. 
+The log window will eventually say YAMCS's web client will be accessible at (ip):(port) in any web browser. 
 YAMCS studio can also be used instead of the web client. Both usages are out of scope. 
 
-Then, to update the submodules:
+Later, at any point, to update the submodules, run the following at the root of yamcs_system_demo:
 ```bash
 git pull
-git submodule update --init --recursive
+git submodule update --init --recursive --progress
 ```
 ## Navigating the repository
 

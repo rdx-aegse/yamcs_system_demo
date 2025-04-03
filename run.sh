@@ -3,7 +3,7 @@
 # Function to handle shutdown
 shutdown() {
     echo "Shutting down..."
-    docker-compose down -v
+    docker-compose down -v --remove-orphans
     exit
 }
 

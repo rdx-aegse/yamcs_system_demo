@@ -21,9 +21,9 @@ declare -A sheets
 shopt -s nullglob  # Enable nullglob so that *.csv expands to nothing if no matches found
 for file in *.csv; do
     # Extract the prefix (part before the underscore)
-    prefix="${file%%_*}"
+    prefix="${file%_*}"
     # Extract sheetName from the filename (for each prefix_sheetName.csv get sheetName)
-    sheetName="${file#*_}"  # Remove everything before and including the underscore
+    sheetName="${file##*_}"  # Remove everything before and including the underscore
     sheetName="${sheetName%.csv}"  # Remove .csv extension
 
     # Create folder $prefix if it doesn't exist

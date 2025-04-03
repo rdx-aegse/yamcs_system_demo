@@ -1,7 +1,7 @@
 services:
   - class: org.yamcs.http.HttpServer
     args:
-      port: 8090
+      port: ${env.YAMCS_HTTP_PORT}
       address: "0.0.0.0"
       cors:
         allowOrigin: "*"
@@ -13,7 +13,8 @@ services:
 dataDir: yamcs-data
 
 instances:
-  - yamcs_link_test
+  - yamcs_link_demo
+  - fprime_demo
 
 # Secret key unique to a particular Yamcs installation.
 # This is used to provide cryptographic signing.

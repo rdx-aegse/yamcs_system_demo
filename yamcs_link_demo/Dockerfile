@@ -2,6 +2,6 @@ FROM python:3
 
 WORKDIR /test
 
-COPY ./src/yamcs_link /test
+COPY ./src/ /test
 
-CMD ["python", "yamcs_link.py"]
+CMD ["python", "main.py"]
