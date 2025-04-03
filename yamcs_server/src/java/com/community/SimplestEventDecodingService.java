@@ -155,7 +155,7 @@ public class SimplestEventDecodingService extends AbstractYamcsService implement
                         .setSeqNumber(0) //Copied from CfsEventDecoder
                         .setSource(source)
                         .setSeverity(EventSeverity.forNumber(severity))
-                        .setType("EVID-"+event_id)
+                        .setType("EVID-"+Integer.toHexString(event_id).toUpperCase())
                         .setMessage(message)
                         .build();
         eventProducer.sendEvent(ev);
