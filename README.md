@@ -1,6 +1,6 @@
 # yamcs_system_demo
 
-Reference demonstration application of a YAMCS system with applications made with the [yamcs_link](https://github.com/rdx-aegse/yamcs_link) jumpstart library and fprime applications (TBD). 
+Reference demonstration application of a YAMCS system with applications made with the [yamcs_link](https://github.com/rdx-aegse/yamcs_link) jumpstart library and fprime applications. 
 
 ## Prerequisites
  
