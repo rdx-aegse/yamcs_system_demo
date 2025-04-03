@@ -6,3 +6,6 @@
 	path = yamcs_link_demo/src/yamcs_link
 	url = https://github.com/rdx-aegse/yamcs_link
 	branch = main
+[submodule "fprime_demo/src/fprime_app/fprime"]
+	path = fprime_demo/src/fprime_app/fprime
+	url = https://github.com/rdx-aegse/fprime.git
