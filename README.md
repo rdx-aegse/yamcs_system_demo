@@ -27,6 +27,9 @@ chmod +x ./run.sh
 ./run.sh
 ```
 
+The log window will eventually say YAMCS's web client will be accessible at (ip):(port) in any web browser. 
+YAMCS studio can also be used instead of the web client. Both usages are out of scope. 
+
 Later, at any point, to update the submodules, run the following at the root of yamcs_system_demo:
 ```bash
 git pull
